@@ -319,7 +319,75 @@ body{
     margin: 0;
     font-size: .8rem;
 }
-
+/* -----------------project section-------------------- */
+.project-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1717;
+    position: absolute;
+    top: 0;
+    left: 16rem;
+}
+.project-container{
+    padding: 4rem;
+}
+.my-projects{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.lightbox-overlay{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000e6;
+    padding: 20px;
+    border-radius: 5px;
+    width: 96%;
+    height: 37%;
+    display: flex;
+}
+.car{
+    top: 32%;
+}
+.movie{
+    top: 74%;
+}
+.lightbox-content{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-content h1{
+    line-height: 1.5;
+    text-align: center;
+}
+.lightbox-content button{
+    border: none;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #4681f4;
+    cursor: pointer;
+    color: #fff;
+}
+.lightbox-content button:hover{
+    background-color: #284c93;
+    transform: translateY(-2px);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.each-project img{
+    width: 100%;
+    cursor: pointer;
+}
+.mobile-content{
+    display: none;
+}
 /* ----------------services section----------------- */
 .service-section{
     display: flex;
@@ -526,6 +594,9 @@ body{
     .contact-section{
         left: 0;
     }
+    .project-section{
+        left: 0;
+    }
 }
 
 @media only screen and (max-width:680px){
@@ -557,5 +628,22 @@ body{
     .fun-facts {
         display: grid;
         gap: 3rem;
+    }
+    .lightbox-overlay{
+        position: relative;
+        left: 0;
+        transform: none;
+        background-color: transparent;
+    }
+    .mobile-content{
+        display: flex !important;
+    }
+    /* .lightbox-content{
+        display: none ;
+    } */
+    .lightbox-content h1 {
+        line-height: 1.2;
+        font-size: 1.3rem;
+        font-weight: 100;
     }
 }
