@@ -87,7 +87,7 @@ body{
     border-radius: 100%;
 }
 .home-img{
-    background-image: url(./assets/naseeh.jpg);
+    background-image: url(./assets/nas.JPG);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -96,14 +96,15 @@ body{
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
-    animation: morph 8s ease-in-out 1s infinite;
-    background-blend-mode: multiply;
-    box-shadow: inset 0 0 0 9px hsla(0,0%,100%,.3);
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    /* animation: morph 8s ease-in-out 1s infinite; */
+    /* background-blend-mode: multiply; */
+    /* box-shadow: inset 0 0 0 9px hsla(0,0%,100%,.3); */
+    /* border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; */
+    border-radius: 6px;
     overflow: hidden;
 }
 /* for animation of image border */
-@keyframes morph {
+/* @keyframes morph {
     0% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
@@ -113,7 +114,7 @@ body{
     100% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
-  }
+  } */
 .home-description{
     display: grid;
     width: 30rem;
@@ -596,6 +597,8 @@ body{
     }
     .project-section{
         left: 0;
+    }.home-img{
+        border-radius: 50%;
     }
 }
 
@@ -645,5 +648,8 @@ body{
         line-height: 1.2;
         font-size: 1.3rem;
         font-weight: 100;
+    }
+    .home-img{
+        border-radius: 50%;
     }
 }
