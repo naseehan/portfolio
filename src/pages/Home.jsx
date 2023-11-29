@@ -1,14 +1,13 @@
-import React from 'react'
 import { TypeAnimation } from "react-type-animation"
-// import naseeh from "../assets/naseeh.jpg"
 
 function Home() {
+
+  
   return (
     <section className="home-section">
         <div className="home-container">
             <div className="avatar">
             <div className="home-img">
-                {/* <img src={naseeh} alt="" /> */}
             </div>
             </div>
             <div className="home-description">
