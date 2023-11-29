@@ -8,7 +8,7 @@ function About() {
         <h2 className='about-me'>About Me</h2>
         <div className='dev-name'>
             <h3>Naseeh AN</h3>
-            <p>web developer</p>
+            <p>fullstack developer</p>
         </div>
         <div className='dev-intro'>
           <p>Hi there! My name is Naseeh AN, and I'm a React developer  building web applications and user interfaces.

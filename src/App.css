@@ -573,11 +573,15 @@ textarea::placeholder {
   }
   .about-container {
     width: 100%;
+    margin-top: 5rem;
   }
   .about-me-container {
     width: 100%;
     text-align: center;
     padding: 0;
+  }
+  .dev-intro{
+    padding: 1rem;
   }
   .dev-details {
     display: grid;
