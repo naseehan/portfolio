@@ -20,6 +20,7 @@ function About() {
             to require little-to-no maintenance while running on their own for years.
           </p>
         </div>
+        
         <div className='dev-details'>
             <div className="left-details">
               <ul>
