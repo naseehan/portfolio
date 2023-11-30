@@ -8,7 +8,6 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 // google ananytics
 import ReactGA from 'react-ga';
-// ReactGA.initialize('G-FSM4XF3ZZR');
 
 
 function App() {
