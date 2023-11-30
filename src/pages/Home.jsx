@@ -2,7 +2,8 @@ import { TypeAnimation } from "react-type-animation"
 
 function Home() {
 
-  
+ 
+
   return (
     <section className="home-section">
         <div className="home-container">
