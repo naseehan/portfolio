@@ -6,6 +6,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import NewProjects from './pages/NewProjects'
 // google ananytics
 import ReactGA from 'react-ga';
 
@@ -14,14 +15,14 @@ function App() {
 
   const location = useLocation();
 
-  useEffect(() => {
-    ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
+  // useEffect(() => {
+  //   ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+  //   ReactGA.pageview(window.location.pathname + window.location.search);
+  // }, []);
 
-  useEffect(() => {
-    ReactGA.pageview(location.pathname + location.search);
-  }, [location]);
+  // useEffect(() => {
+  //   ReactGA.pageview(location.pathname + location.search);
+  // }, [location]);
 
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
         <Route path='/project' element={<Projects />} />
         <Route path='/service' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/projects' element={<Projects />} />
       </Routes>
       </>
   );

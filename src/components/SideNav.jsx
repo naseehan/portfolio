@@ -46,7 +46,7 @@ const handleHamb = () => {
     <Link onClick={ () => {
     openNav();
     handleHamb();
-    }} to="/project">
+    }} to="/projects">
           Projects
         </Link>
     </li>
@@ -85,7 +85,7 @@ const handleHamb = () => {
                     </Link>
                 </li>
                 <li>
-                <Link to="/project">
+                <Link to="/projects">
                 <i class="fa-solid fa-briefcase" style={{color: "#ffffff;"}}></i>    Projects
                     </Link>
                 </li>
