@@ -6,7 +6,6 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
-import NewProjects from './pages/NewProjects'
 // google ananytics
 import ReactGA from 'react-ga';
 
@@ -34,7 +33,6 @@ function App() {
         <Route path='/service' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/projects' element={<Projects />} />
-        {/* <Route path='/new' element={<NewProjects />} /> */}
       </Routes>
       </>
   );
