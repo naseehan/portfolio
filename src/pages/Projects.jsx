@@ -67,8 +67,7 @@ function Projects() {
                     categories."
                   </h1>
                   <a href="https://noble-events.onrender.com/">
-                    {" "}
-                    <button>Click here</button>{" "}
+                    <button>Click here</button>
                   </a>
                 </div>
               </div>

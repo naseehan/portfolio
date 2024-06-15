@@ -37,7 +37,7 @@ function About() {
                         Age:
                     </span>
                     <span>
-                        22
+                        23
                     </span>
                 </li>
                 <li>
@@ -191,7 +191,7 @@ function About() {
 
 <div className="year-study">
   <div className="year">
-    <p>2018-Present</p>
+    <p>2018-2023</p>
   </div>
   <div className="study">
       <p>MG University</p>
@@ -210,6 +210,24 @@ function About() {
 </div>
 
 </div>
+
+<div className="education">
+  <h3>Experience</h3>
+  <div className="year-study">
+  <div className="year">
+    <p>2023-2024</p>
+  </div>
+  <div className="study">
+      <p>Eduzell technologies and solution</p>
+      <p>Junior developer</p>
+  </div>
+</div>
+
+
+
+</div>
+
+
 
       </div>
     </section>

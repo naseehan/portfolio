@@ -28,16 +28,16 @@ function Home() {
                 <div className="socials">
                     
                     <a href="https://www.facebook.com/naseehnjk.messi.10/">
-                <i class="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-facebook-f"></i>
                 </a>
                 <a href="https://www.instagram.com/naseeh10/">
-                <i class="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
                 </a>
                 <a href="https://github.com/naseehan">
-                <i class="fa-brands fa-github"></i>
+                <i className="fa-brands fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/naseeh-an-a4951b240/">
-                <i class="fa-brands fa-linkedin-in"></i>
+                <i className="fa-brands fa-linkedin-in"></i>
                 </a>
                 </div>
             </div>
