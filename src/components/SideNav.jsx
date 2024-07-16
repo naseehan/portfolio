@@ -75,28 +75,28 @@ const handleHamb = () => {
             <ul>
                 <li>
                     <Link to="/">
-                       <i className="fa-solid fa-house" style={{color: "#f7f7f7;"}}></i>  Home
+                       <i className="fa-solid fa-house" style={{color: "#f7f7f7"}}></i>  Home
                         
                     </Link>
                 </li>
                 <li>
                 <Link to="/about">
-                <i className="fa-solid fa-user" style={{color: "#ffffff;"}}></i>    About
+                <i className="fa-solid fa-user" style={{color: "#ffffff"}}></i>    About
                     </Link>
                 </li>
                 <li>
                 <Link to="/projects">
-                <i className="fa-solid fa-briefcase" style={{color: "#ffffff;"}}></i>    Projects
+                <i className="fa-solid fa-briefcase" style={{color: "#ffffff"}}></i>    Projects
                     </Link>
                 </li>
                 <li>
                 <Link to="/service">
-                <i className="fa-solid fa-gear" style={{color: "#ffffff;"}}></i>    Service
+                <i className="fa-solid fa-gear" style={{color: "#ffffff"}}></i>    Service
                     </Link>
                 </li>
                 <li>
                 <Link to="/contact">
-                <i className="fa-solid fa-envelope" style={{color: "#ffffff;"}}></i>    Contact
+                <i className="fa-solid fa-envelope" style={{color: "#ffffff"}}></i>    Contact
                     </Link>
                 </li>
             </ul>

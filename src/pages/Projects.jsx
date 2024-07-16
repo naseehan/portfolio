@@ -51,8 +51,9 @@ function Projects() {
       <div className="project-container">
         <h2>My projects</h2>
         <div className="my-projects">
+          
           <div className="each-project">
-            <img src={eventImg} alt="" onClick={handleEventClick} />
+            <img src={eventImg} alt="event" onClick={handleEventClick} />
             {event && (
               <div className="lightbox-overlay event" onClick={handleEventClose}>
                 <div className="lightbox-content">
@@ -75,7 +76,7 @@ function Projects() {
           </div>
 
           <div className="each-project">
-            <img src={carImg} alt="" onClick={handleCarClick} />
+            <img src={carImg} alt="car" onClick={handleCarClick} />
             {car && (
               <div className="lightbox-overlay car" onClick={handleClose}>
                 <div className="lightbox-content">
@@ -97,7 +98,7 @@ function Projects() {
           </div>
 
           <div className="each-project">
-            <img src={movieImg} alt="" onClick={handleMovieClick} />
+            <img src={movieImg} alt="movie" onClick={handleMovieClick} />
 
             {movie && (
               <div

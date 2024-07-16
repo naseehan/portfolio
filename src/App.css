@@ -389,6 +389,9 @@ textarea::placeholder {
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.each-project{
+  cursor: pointer;
+}
 .each-project img {
   width: 100%;
   cursor: pointer;
