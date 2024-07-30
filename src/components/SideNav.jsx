@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom"
+import ReactGA from 'react-ga4';
 
 function SideNav() {
 
@@ -7,10 +8,20 @@ const [nav, setNav] = useState(false)
 const [hambButton, setHambButton] = useState(false)
 
 const openNav = () => {
+    ReactGA.event({
+        category: 'User',
+        action: 'Click',
+        label: 'Button Click'
+      });
     setNav(!nav)
 }
 
 const handleHamb = () => {
+    ReactGA.event({
+        category: 'User',
+        action: 'Click',
+        label: 'Button Click'
+      });
     setHambButton(!hambButton)
 }
 
