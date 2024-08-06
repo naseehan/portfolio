@@ -9,6 +9,7 @@ import Projects from './pages/Projects';
 // google ananytics
 // import ReactGA from 'react-ga';
 import NewProjects from './pages/NewProjects';
+import NewSide from './components/NewSide';
 
 
 function App() {

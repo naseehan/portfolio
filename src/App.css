@@ -2,6 +2,7 @@ body {
   font-family: sans-serif;
   background-color: #000;
   color: #fff;
+  margin: 0;
 }
 textarea::placeholder {
   color: #fff;
@@ -16,9 +17,9 @@ textarea::placeholder {
 .side-nav-container {
   background-color: #000;
   position: relative;
-  top: 0;
+  top: -16px;
   left: 0;
-  height: 39rem;
+  height: 46.4rem;
   width: 16rem;
 }
 .side-nav-container ul {
@@ -27,7 +28,7 @@ textarea::placeholder {
   gap: 3rem;
   list-style: none;
   height: auto;
-  padding: 13rem 0;
+  padding: 15rem 0;
   align-items: center;
 }
 .side-nav-container a {
@@ -43,6 +44,7 @@ textarea::placeholder {
   left: -7px !important;
 }
 .mobile-nav ul {
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -56,6 +58,7 @@ textarea::placeholder {
   display: none;
   position: absolute;
   top: 24px;
+  left: 10px;
   z-index: 999999;
 }
 .mobile-nav {
@@ -760,6 +763,7 @@ aui-message:first-child,
     width: 16rem;
     height: 100vh;
     background-color: #000;
+    text-align: center;
   }
   .avatar {
     width: 200px;
