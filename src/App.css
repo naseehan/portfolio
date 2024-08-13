@@ -404,7 +404,7 @@ textarea::placeholder {
   padding: 20px;
   border-radius: 5px;
   width: 96%;
-  height: 46%;
+  height: 50%;
   display: flex;
 }
 /* .event {
@@ -445,6 +445,7 @@ textarea::placeholder {
 }
 .each-project {
   cursor: pointer;
+  position: relative;
 }
 .each-project img {
   width: 100%;
