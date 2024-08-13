@@ -404,18 +404,8 @@ textarea::placeholder {
   padding: 20px;
   border-radius: 5px;
   width: 96%;
-  height: 50%;
   display: flex;
 }
-/* .event {
-  top: 22%;
-}
-.car {
-  top: 52%;
-}
-.movie {
-  top: 82%;
-} */
 .lightbox-content {
   display: flex !important;
   flex-direction: column;
