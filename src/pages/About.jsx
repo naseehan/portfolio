@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 function About() {
+  useEffect(() => {
+    // Initialize ScrollReveal
+    const sr = ScrollReveal({
+      distance: "50px",
+      duration: 1000,
+      easing: "ease-out",
+    });
+
+    // Reveal elements
+    sr.reveal(".headline", { origin: "bottom" });
+    sr.reveal(".autoShow", { origin: "bottom", interval: 200 });
+
+    // Clean up on unmount
+    return () => {
+      sr.destroy();
+    };
+  }, []);
+
   return (
     <section className="about-section">
       <div className="about-container">
@@ -85,7 +104,7 @@ function About() {
         {/* Programing skills */}
 
         <div className="programming-skills">
-          <h2 className="autoShow">Programming Skills</h2>
+          <h2 className="autoShow headline">Programming Skills</h2>
           <div className="skills autoShow">
             <div className="left-skills">
               <div>
