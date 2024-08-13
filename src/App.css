@@ -893,6 +893,7 @@ aui-message:first-child,
     left: 0;
     transform: none;
     background-color: transparent;
+    width: auto;
   }
   .mobile-content {
     display: flex !important;
