@@ -334,11 +334,11 @@ textarea::placeholder {
 }
 
 /* auto show animation */
-.autoShow {
+/* .autoShow {
   animation: autoShowAnimation both;
   animation-timeline: view(70% 5%);
-}
-@keyframes autoShowAnimation {
+} */
+/* @keyframes autoShowAnimation {
   from {
     opacity: 0;
     transform: translateY(200px) scale(0.3);
@@ -347,11 +347,11 @@ textarea::placeholder {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
-}
+} */
 /* Apply the autoBlur animation only on larger screens */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .autoBlur {
-    animation: autoBlurAnimation 3s linear both;
+    animation: autoBlurAnimation 3s ease-in-out infinite;
     animation-timeline: view();
   }
 }
@@ -367,15 +367,15 @@ textarea::placeholder {
   100% {
     filter: blur(40px);
   }
-}
+} */
 
 /* For mobile and tablet devices, do not apply any blur or animation */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .autoBlur {
     filter: none;
     animation: none;
   }
-}
+} */
 
 /* -----------------project section-------------------- */
 .project-section {
