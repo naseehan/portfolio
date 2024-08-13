@@ -1,7 +1,10 @@
+:root {
+  --light-color: #fff;
+}
 body {
   font-family: sans-serif;
   background-color: #000;
-  color: #fff;
+  color: var(--light-color);
   margin: 0;
 }
 textarea::placeholder {
@@ -127,7 +130,7 @@ textarea::placeholder {
   align-content: center;
   gap: 1rem;
   margin-bottom: 3rem;
-  padding: .4rem;
+  padding: 0.4rem;
 }
 .home-description h1 {
   font-size: 4rem;
@@ -155,13 +158,12 @@ textarea::placeholder {
   transform: translateY(-5px);
 }
 /* ------------------about section-------------- */
+
 .about-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 100%; */
   background-color: #1c1717;
-
   position: absolute;
   top: 0;
   left: 16rem;
@@ -170,6 +172,9 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 .about-me-container {
   padding: 6rem 6rem;
@@ -327,6 +332,51 @@ textarea::placeholder {
   margin: 0;
   font-size: 0.8rem;
 }
+
+/* auto show animation */
+.autoShow {
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
+}
+@keyframes autoShowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* Apply the autoBlur animation only on larger screens */
+@media (min-width: 768px) {
+  .autoBlur {
+    animation: autoBlurAnimation 3s linear both;
+    animation-timeline: view();
+  }
+}
+
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(40px);
+  }
+  35%,
+  60% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(40px);
+  }
+}
+
+/* For mobile and tablet devices, do not apply any blur or animation */
+@media (max-width: 767px) {
+  .autoBlur {
+    filter: none;
+    animation: none;
+  }
+}
+
 /* -----------------project section-------------------- */
 .project-section {
   display: flex;
@@ -348,15 +398,16 @@ textarea::placeholder {
 .lightbox-overlay {
   position: absolute;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   background-color: #000000e6;
   padding: 20px;
   border-radius: 5px;
   width: 96%;
-  height: 19%;
+  height: 46%;
   display: flex;
 }
-.event{
+/* .event {
   top: 22%;
 }
 .car {
@@ -364,7 +415,7 @@ textarea::placeholder {
 }
 .movie {
   top: 82%;
-}
+} */
 .lightbox-content {
   display: flex !important;
   flex-direction: column;
@@ -392,7 +443,7 @@ textarea::placeholder {
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.each-project{
+.each-project {
   cursor: pointer;
 }
 .each-project img {
@@ -720,8 +771,6 @@ aui-message:first-child,
   top: 50%;
 }
 
-
-
 /* mobile section */
 @media only screen and (max-width: 1080px) {
   .side-nav-container {
@@ -789,7 +838,7 @@ aui-message:first-child,
     text-align: center;
     padding: 0;
   }
-  .dev-intro{
+  .dev-intro {
     padding: 1rem;
   }
   .dev-details {
