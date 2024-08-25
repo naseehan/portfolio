@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import WaveText from "../components/WaveText";
 
 function About() {
   useEffect(() => {
@@ -25,6 +26,9 @@ function About() {
       <div className="about-container">
         <div className="about-me-container">
           <h2 className="about-me">About Me</h2>
+
+          {/* <WaveText /> */}
+
           <div className="dev-name">
             <h3>Naseeh AN</h3>
             <p>fullstack developer</p>
