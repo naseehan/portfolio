@@ -118,7 +118,7 @@ textarea::placeholder {
   top: 0;
   left: 16rem;
   width: -webkit-fill-available;
-  height: 100%;
+  height: -webkit-fill-available;
 }
 .home-container {
   display: flex;
@@ -824,7 +824,7 @@ aui-message:first-child,
     left: 0;
     display: grid;
     text-align: center;
-    /* height: auto; */
+    /* height: unset; */
   }
   .home-container {
     display: grid;
