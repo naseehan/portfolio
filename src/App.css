@@ -824,7 +824,7 @@ aui-message:first-child,
     left: 0;
     display: grid;
     text-align: center;
-    height: auto;
+    /* height: auto; */
   }
   .home-container {
     display: grid;

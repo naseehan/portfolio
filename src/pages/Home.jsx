@@ -1,10 +1,9 @@
 import { TypeAnimation } from "react-type-animation";
 import WaveText from "../components/WaveText";
-
 import Socials from "../components/Socials";
 import ThemeIcons from "../components/ThemeIcons";
-import { useState } from "react";
 import { useSelector } from "react-redux";
+import SkyBg from "../components/SkyBg";
 
 
 
@@ -18,6 +17,7 @@ function Home() {
 
 <ThemeIcons />
 
+{/* {theme1 === false && <SkyBg />} */}
      
       <div className="home-container">
         <div className="avatar">
