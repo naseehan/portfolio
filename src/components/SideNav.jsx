@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ReactGA from "react-ga4";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 function SideNav() {
   const [nav, setNav] = useState(false);
   const [hambButton, setHambButton] = useState(false);
+  // redux theme
+  const { theme1 } = useSelector((state) => state.theme);
+
 
   const openNav = () => {
     ReactGA.event({
@@ -35,7 +39,7 @@ function SideNav() {
       <nav>
         {/* mobile nav */}
         <motion.div
-          className={`mobile-nav ${nav ? "open-nav" : ""}`}
+          className={`mobile-nav ${nav ? "open-nav" : ""} ${theme1 ? "light" : "dark"}`}
           animate={nav ? "open" : "closed"}
           variants={variants}
           initial="closed"
@@ -44,6 +48,7 @@ function SideNav() {
           <ul>
             <li>
               <Link
+              className={`${theme1 ? "light" : "dark"}`}
                 onClick={() => {
                   openNav();
                   handleHamb();
@@ -55,6 +60,7 @@ function SideNav() {
             </li>
             <li>
               <Link
+              className={`${theme1 ? "light" : "dark"}`}
                 onClick={() => {
                   openNav();
                   handleHamb();
@@ -66,6 +72,7 @@ function SideNav() {
             </li>
             <li>
               <Link
+              className={`${theme1 ? "light" : "dark"}`}
                 onClick={() => {
                   openNav();
                   handleHamb();
@@ -77,6 +84,7 @@ function SideNav() {
             </li>
             <li>
               <Link
+              className={`${theme1 ? "light" : "dark"}`}
                 onClick={() => {
                   openNav();
                   handleHamb();
@@ -88,6 +96,7 @@ function SideNav() {
             </li>
             <li>
               <Link
+              className={`${theme1 ? "light" : "dark"}`}
                 onClick={() => {
                   openNav();
                   handleHamb();
@@ -100,49 +109,49 @@ function SideNav() {
           </ul>
         </motion.div>
 
-        <div className="side-nav-container">
+        <div className={`side-nav-container ${theme1 ? "light" : "dark"}`}>
           <ul>
             <li>
-              <Link to="/">
+              <Link to="/" className={`${theme1 ? "light" : "dark"}`}>
                 <i
                   className="fa-solid fa-house"
-                  style={{ color: "#f7f7f7" }}
+                  style={{ color: theme1 ? "#000000" : "#ffffff" }}
                 ></i>{" "}
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about">
+              <Link to="/about" className={`${theme1 ? "light" : "dark"}`}>
                 <i
                   className="fa-solid fa-user"
-                  style={{ color: "#ffffff" }}
+                  style={{ color: theme1 ? "#000000" : "#ffffff" }}
                 ></i>{" "}
                 About
               </Link>
             </li>
             <li>
-              <Link to="/projects">
+              <Link to="/projects" className={`${theme1 ? "light" : "dark"}`}>
                 <i
                   className="fa-solid fa-briefcase"
-                  style={{ color: "#ffffff" }}
+                  style={{ color: theme1 ? "#000000" : "#ffffff" }}
                 ></i>{" "}
                 Projects
               </Link>
             </li>
             <li>
-              <Link to="/service">
+              <Link to="/service" className={`${theme1 ? "light" : "dark"}`}>
                 <i
                   className="fa-solid fa-gear"
-                  style={{ color: "#ffffff" }}
+                  style={{ color: theme1 ? "#000000" : "#ffffff" }}
                 ></i>{" "}
                 Service
               </Link>
             </li>
             <li>
-              <Link to="/contact">
+              <Link to="/contact" className={`${theme1 ? "light" : "dark"}`}>
                 <i
                   className="fa-solid fa-envelope"
-                  style={{ color: "#ffffff" }}
+                  style={{ color: theme1 ? "#000000" : "#ffffff" }}
                 ></i>{" "}
                 Contact
               </Link>
@@ -162,6 +171,8 @@ function SideNav() {
             className={`${
               hambButton ? "fa-regular fa-x fa-xl" : "fa-solid fa-bars fa-xl"
             }`}
+            style={{ color: theme1 ? "#000000" : "#ffffff" }}
+
           ></i>
         </div>
       </nav>

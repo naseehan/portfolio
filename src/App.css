@@ -1,9 +1,48 @@
 :root {
   --light-color: #fff;
+  --dark-color: #000;
+}
+.dark {
+  --font-color: #fff;
+  --bg-color: #1c1717;
+  --sidenav-bg: #000;
+  --p-font-color: #bbb;
+  --skill-bg-color: #000;
+  --skill-font: #efefef;
+  --service-bg: #323232;
+  --number-bg: #473C33;
+  --facts-bg: #000;
+  --border: #fdfdfd;
+  --contact-form-border: #6a6464;
+  --button-color: #000;
+  --about-border: #dfdfdf;
+  --year: #000;
+}
+.light {
+  --font-color: #000;
+  --bg-color: #fff;
+  --sidenav-bg: #F0EBE3;
+  --p-font-color: #000;
+  --skill-bg-color: #EEEDEB;
+  --skill-font: #000;
+  --service-bg: #EEEDEB;
+  --number-bg:   #f8f8f8;
+  --facts-bg: #F9F9F9;
+  --border: #000;
+  --contact-form-border: #6a6464;
+  --button-color: #fff;
+  --about-border: #000;
+  --year: #F7EFE5;
+}
+p,
+h1,
+span,
+h3 {
+  color: var(--font-color);
 }
 body {
   font-family: sans-serif;
-  background-color: #000;
+  /* background-color: #000; */
   color: var(--light-color);
   margin: 0;
 }
@@ -18,7 +57,7 @@ textarea::placeholder {
   position: fixed;
 }
 .side-nav-container {
-  background-color: #000;
+  background-color: var(--sidenav-bg);
   position: relative;
   top: -16px;
   left: 0;
@@ -35,7 +74,7 @@ textarea::placeholder {
   align-items: center;
 }
 .side-nav-container a {
-  color: #fff;
+  color: var(--font-color);
   text-decoration: none;
   transition: letter-spacing 0.5s;
 }
@@ -54,7 +93,7 @@ textarea::placeholder {
   gap: 4rem;
 }
 .mobile-nav a {
-  color: #fff;
+  color: var(--font-color);
   text-decoration: none;
 }
 .mobile-hamb {
@@ -68,15 +107,13 @@ textarea::placeholder {
   display: none;
 }
 /* ---------------home section------------ */
+/* #1c1717 */
 .home-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 100%; */
-  background-color: #1c1717;
+  background-color: var(--bg-color);
   color: #fff;
-  /* height: 39rem; */
-
   position: absolute;
   top: 0;
   left: 16rem;
@@ -105,25 +142,9 @@ textarea::placeholder {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  /* animation: morph 8s ease-in-out 1s infinite; */
-  /* background-blend-mode: multiply; */
-  /* box-shadow: inset 0 0 0 9px hsla(0,0%,100%,.3); */
-  /* border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; */
   border-radius: 6px;
   overflow: hidden;
 }
-/* for animation of image border */
-/* @keyframes morph {
-    0% {
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
-    50% {
-        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    }
-    100% {
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
-  } */
 .home-description {
   display: grid;
   width: 30rem;
@@ -144,7 +165,7 @@ textarea::placeholder {
 .home-description p {
   line-height: 1.5;
   font-size: 1.2rem;
-  color: #bbb;
+  /* color: #bbb; */
 }
 .socials {
   display: flex;
@@ -163,7 +184,7 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1c1717;
+  background-color: var(--bg-color);
   position: absolute;
   top: 0;
   left: 16rem;
@@ -185,7 +206,7 @@ textarea::placeholder {
   padding: 1rem;
 }
 .about-container p {
-  color: #bbb;
+  color: var(--p-font-color);
   line-height: 1.7;
   font-size: 0.9rem;
 }
@@ -196,19 +217,20 @@ textarea::placeholder {
 }
 .dev-name h3 {
   margin: 0;
+  color: var(--font-color);
 }
 .dev-intro {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-top: 1px solid #dfdfdf;
-  border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid var(--about-border);
+  border-bottom: 1px solid var(--about-border);
   padding: 1rem 0;
 }
 .dev-details {
   display: flex;
   gap: 10rem;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid var(--about-border);
   padding-bottom: 1rem;
 }
 .dev-details ul {
@@ -225,7 +247,7 @@ textarea::placeholder {
 }
 .dev-details ul li span:last-child {
   font-size: 0.9rem;
-  color: #bbb;
+  color: var(--p-font-color);
 }
 .left-details li {
   display: flex;
@@ -236,11 +258,12 @@ textarea::placeholder {
   gap: 2rem;
 }
 .programming-skills {
-  background-color: #000;
+  background-color: var(--skill-bg-color);
   padding: 3rem 6rem;
 }
 .programming-skills h2 {
   margin-bottom: 4rem;
+  color: var(--font-color);
 }
 .skills {
   display: flex;
@@ -255,14 +278,14 @@ textarea::placeholder {
 .left-skills label {
   float: left;
   font-size: 0.9rem;
-  color: #efefef;
+  color: var(--skill-font);
   font-style: italic;
   margin-bottom: 8px;
 }
 .left-skills span {
   float: right;
   font-size: 0.9rem;
-  color: #efefef;
+  color: var(--skill-font);
   font-style: italic;
 }
 .progress {
@@ -309,23 +332,26 @@ textarea::placeholder {
   flex-direction: column;
   gap: 2rem;
 }
+.education h3{
+  color: var(--font-color);
+}
 .year-study {
   display: flex;
   gap: 10rem;
 }
 .year {
-  background-color: #000;
+  background-color: var(--year);
   width: 7rem;
   text-align: center;
   border-radius: 50px;
-  color: #fff;
+  color: var(--font-color);
   letter-spacing: 1px;
   font-weight: 600;
 }
 .study p:first-child {
   margin: 0;
   font-weight: 600;
-  color: #fff;
+  color: var(--font-color);
   letter-spacing: 1px;
 }
 .study p:last-child {
@@ -382,13 +408,16 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1c1717;
+  background-color: var(--bg-color);
   position: absolute;
   top: 0;
   left: 16rem;
 }
 .project-container {
   padding: 4rem;
+}
+.project-container h2{
+  color: var(--font-color);
 }
 .my-projects {
   display: flex;
@@ -400,7 +429,7 @@ textarea::placeholder {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #000000e6;
+  background-color: var(--bg-color);
   padding: 20px;
   border-radius: 5px;
   width: 96%;
@@ -449,10 +478,13 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1c1717;
+  background-color: var(--bg-color);
   position: absolute;
   top: 0;
   left: 16rem;
+}
+.service-section h2{
+  color: var(--font-color);
 }
 .service-container {
   padding: 4rem;
@@ -465,20 +497,23 @@ textarea::placeholder {
 .each-service {
   display: flex;
   flex-direction: column;
-  background-color: #323232;
+  background-color: var(--service-bg);
   padding: 2rem;
 }
+.each-service h3{
+  color: var(--font-color);
+}
 .each-service p {
-  color: #bbb;
+  color: var(--p-font-color);
   line-height: 1.7;
   font-size: 0.9rem;
 }
 .number {
-  background-color: #f8f8f8;
+  background-color: var(--number-bg);
   width: fit-content;
   padding: 1rem;
   border-radius: 50%;
-  color: #000;
+  color: var(--font-color);
   font-size: 1rem;
   font-weight: 600;
 }
@@ -486,21 +521,22 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  background-color: #000;
+  background-color: var(--facts-bg);
   padding: 4rem;
   margin-top: 4rem;
 }
 .fun-facts {
   display: flex;
-  gap: 8rem;
+  gap: 2rem;
+  flex-wrap: wrap;
   text-align: center;
 }
 .each-fact {
-  border: 1px solid #fdfdfd;
+  border: 1px solid var(--border);
   padding: 1rem 3rem;
 }
 .each-fact p {
-  color: #bbb;
+  color: var(--p-font-color);
   line-height: 1.7;
   font-size: 0.9rem;
 }
@@ -510,7 +546,7 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1c1717;
+  background-color: var(--bg-color);
   position: absolute;
   top: 0;
   left: 16rem;
@@ -523,7 +559,6 @@ textarea::placeholder {
 .get-in-touch {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 .contact-form form {
   display: flex;
@@ -532,23 +567,26 @@ textarea::placeholder {
 }
 .contact-form input {
   padding: 0.6rem;
-  background-color: #1c1717;
+  background-color: var(--bg-color);
   border: 1px solid #6a6464;
   font-weight: 600;
   font-style: italic;
-  color: #fff;
+  color: var(--font-color);
 }
 .contact-form input::placeholder {
-  color: #fff;
+  color: var(--font-color);
 }
 .contact-form textarea {
   padding: 0.6rem;
-  background-color: #1c1717;
+  background-color: var(--bg-color);
   border: 1px solid #6a6464;
   font-weight: 600;
   font-style: italic;
-  color: #fff;
+  color: var(--font-color);
   font-size: 0.9rem;
+}
+.contact-form textarea::placeholder {
+  color: var(--font-color);
 }
 .contact-form button {
   width: fit-content;
@@ -556,10 +594,11 @@ textarea::placeholder {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
-  background-color: #fff;
+  background-color: var(--font-color);
   border: none;
   border-radius: 4px;
   transition: all 0.3s ease;
+  color: var(--button-color);
 }
 .contact-form button:hover {
   letter-spacing: 3px;
@@ -777,13 +816,14 @@ aui-message:first-child,
     z-index: 10;
     transition: all 0.3s ease;
   }
-  body {
+  /* body {
     background-color: #1c1717;
-  }
+  } */
   .home-section {
     left: 0;
     display: grid;
     text-align: center;
+    height: auto;
   }
   .home-container {
     display: grid;
@@ -802,7 +842,7 @@ aui-message:first-child,
     z-index: 3;
     width: 16rem;
     height: 100vh;
-    background-color: #000;
+    background-color: var(--sidenav-bg);
     text-align: center;
   }
   .avatar {
@@ -849,6 +889,8 @@ aui-message:first-child,
   }
   .contact-section {
     left: 0;
+    align-items: unset;
+    height: 100%;
   }
   .project-section {
     left: 0;

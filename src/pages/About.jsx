@@ -1,8 +1,17 @@
 import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import WaveText from "../components/WaveText";
+import { useSelector } from "react-redux";
+import ThemeIcons from "../components/ThemeIcons";
+
+
+
 
 function About() {
+
+  const { theme1 } = useSelector((state) => state.theme);
+
+
   useEffect(() => {
     // Initialize ScrollReveal
     const sr = ScrollReveal({
@@ -22,8 +31,10 @@ function About() {
   }, []);
 
   return (
-    <section className="about-section">
-      <div className="about-container">
+    <section className={`about-section ${theme1 ? "light" : "dark"}`}>
+     <ThemeIcons />
+
+      <div className={`about-container ${theme1 ? "light" : "dark"}`}>
         <div className="about-me-container">
           <h2 className="about-me">About Me</h2>
 
@@ -31,7 +42,7 @@ function About() {
 
           <div className="dev-name">
             <h3>Naseeh AN</h3>
-            <p>fullstack developer</p>
+            <p>Fullstack Developer</p>
           </div>
           <div className="dev-intro">
             <p>

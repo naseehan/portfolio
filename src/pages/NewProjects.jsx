@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
+import ThemeIcons from "../components/ThemeIcons";
+import { useSelector } from "react-redux";
 
 function NewProjects() {
   const [itemId, setItemId] = useState("");
+  const { theme1 } = useSelector((state) => state.theme);
 
   const handleEventClick = (id) => {
     setItemId(id);
@@ -12,7 +15,8 @@ function NewProjects() {
   };
 
   return (
-    <section className="project-section">
+    <section className={`project-section ${theme1 ? "light" : "dark"}`}>
+      <ThemeIcons />
       <div className="project-container">
         <h2>My projects</h2>
         <div className="my-projects">

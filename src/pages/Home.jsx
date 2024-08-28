@@ -1,9 +1,24 @@
 import { TypeAnimation } from "react-type-animation";
 import WaveText from "../components/WaveText";
 
+import Socials from "../components/Socials";
+import ThemeIcons from "../components/ThemeIcons";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+
+
+
+
 function Home() {
+  
+  const { theme1 } = useSelector((state) => state.theme);
+
   return (
-    <section className="home-section">
+    <section className={`home-section ${theme1 ? "light" : "dark"}`}>
+
+<ThemeIcons />
+
+     
       <div className="home-container">
         <div className="avatar">
           <div className="home-img"></div>
@@ -22,56 +37,8 @@ function Home() {
             worlds of logic and creative design to make eye-catching,
             accessible, and user friendly websites and applications.
           </p>
-          <div className="socials">
-            <a href="https://www.facebook.com/naseehnjk.messi.10/">
-              {/* <i className="fa-brands fa-facebook-f"></i> */}
-              <lord-icon
-                src="https://cdn.lordicon.com/mpigogwa.json"
-                trigger="loop"
-                delay="1500"
-                stroke="bold"
-                state="hover-rotate"
-                colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff"
-                style={{ width: "30px", height: "30px" }}
-              ></lord-icon>
-            </a>
-            <a href="https://www.instagram.com/naseeh10/">
-              {/* <i className="fa-brands fa-instagram"></i> */}
-              <lord-icon
-                src="https://cdn.lordicon.com/frnztegr.json"
-                trigger="loop"
-                delay="1500"
-                stroke="bold"
-                state="hover-rotate"
-                colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff,quaternary:#ffffff,quinary:#ffffff,senary:#ffffff"
-                style={{ width: "30px", height: "30px" }}
-              ></lord-icon>
-            </a>
-            <a href="https://github.com/naseehan">
-              {/* <i className="fa-brands fa-github"></i> */}
-              <lord-icon
-                src="https://cdn.lordicon.com/yedgackm.json"
-                trigger="loop"
-                delay="1500"
-                stroke="bold"
-                state="hover-rotate"
-                colors="primary:#ffffff,secondary:#ffffff,tertiary:#000000"
-                style={{ width: "30px", height: "30px" }}
-              ></lord-icon>
-            </a>
-            <a href="https://www.linkedin.com/in/naseeh-an-a4951b240/">
-              {/* <i className="fa-brands fa-linkedin-in"></i> */}
-              <lord-icon
-                src="https://cdn.lordicon.com/mgampcwp.json"
-                trigger="loop"
-                delay="1500"
-                stroke="bold"
-                state="hover-rotate"
-                colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff"
-                style={{ width: "30px", height: "30px" }}
-              ></lord-icon>
-            </a>
-          </div>
+           <Socials  color={theme1 ? "#000000" : "#ffffff"}   secColor={theme1 ? "#ffffff" : "#000000"}  />   
+         {/* <Socials color={"#ffffff"}/> */}
         </div>
       </div>
     </section>

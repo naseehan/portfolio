@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import { set } from "react-ga";
+import ThemeIcons from "../components/ThemeIcons";
+import { useSelector } from "react-redux";
 
 function Contact() {
+
+
+  const { theme1 } = useSelector((state) => state.theme);
+
+
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -33,7 +40,8 @@ function Contact() {
 
   return (
     <>
-      <section className="contact-section">
+      <section className={`contact-section ${theme1 ? "light" : "dark"}`}>
+      <ThemeIcons />
         {alertMessage && (
           <div class="container">
             <div class="row">

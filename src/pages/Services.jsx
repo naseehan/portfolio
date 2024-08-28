@@ -1,10 +1,15 @@
 import React from 'react'
+import ThemeIcons from '../components/ThemeIcons'
+import { useSelector } from 'react-redux';
 
 function Services() {
 
+    const { theme1 } = useSelector((state) => state.theme);
+
 
   return (
-    <section className="service-section">
+    <section className={`service-section ${theme1 ? "light" : "dark"}`}>
+        <ThemeIcons />
         <div className="service-container">
             <h2>What I Do</h2>
             <div className="my-services">
@@ -56,9 +61,17 @@ function Services() {
             <span>20+</span>
             <p>projects finished</p>
         </div>
-        <div className='each-fact's> 
-            <span>3k+</span>
+        <div className='each-fact'> 
+            <span>10k+</span>
             <p>Lines of code</p>
+        </div>
+        <div className='each-fact'> 
+            <span>30+</span>
+            <p>Github repositories</p>
+        </div>
+        <div className='each-fact'> 
+            <span>100+</span>
+            <p>Cups of coffee consumed</p>
         </div>
     </div>
 </div>
