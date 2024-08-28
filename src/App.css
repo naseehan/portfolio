@@ -118,7 +118,7 @@ textarea::placeholder {
   top: 0;
   left: 16rem;
   width: -webkit-fill-available;
-  height: -webkit-fill-available;
+  height: 100%;
 }
 .home-container {
   display: flex;
