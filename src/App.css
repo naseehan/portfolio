@@ -52,16 +52,16 @@ textarea::placeholder {
 #root {
   display: flex;
 }
-.side-nav {
+/* .side-nav {
   width: 16rem;
   position: fixed;
-}
+} */
 .side-nav-container {
   background-color: var(--sidenav-bg);
-  position: relative;
+  position: fixed;
   top: -16px;
   left: 0;
-  height: 46.4rem;
+  height: 47.4rem;
   width: 16rem;
 }
 .side-nav-container ul {
@@ -98,7 +98,7 @@ textarea::placeholder {
 }
 .mobile-hamb {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 24px;
   left: 10px;
   z-index: 999999;
@@ -551,10 +551,11 @@ textarea::placeholder {
   top: 0;
   left: 16rem;
   width: -webkit-fill-available;
+  height: 100%;
 }
 .contact-container {
   width: 100%;
-  padding: 4rem;
+  padding: 3rem;
 }
 .get-in-touch {
   display: flex;
@@ -806,16 +807,16 @@ aui-message:first-child,
   .side-nav-container {
     display: none;
   }
-  .side-nav {
-    position: fixed;
-    top: 0;
+  /* .side-nav { */
+    /* position: fixed;
+    top: 0; */
     /* left: -100%; */
     /* width: 100%; */
-    height: 100vh;
+    /* height: 100vh; */
     /* background-color: #333; */
-    z-index: 10;
-    transition: all 0.3s ease;
-  }
+    /* z-index: 10;
+    transition: all 0.3s ease; */
+  /* } */
   /* body {
     background-color: #1c1717;
   } */
@@ -837,7 +838,7 @@ aui-message:first-child,
     /* height: 32rem; */
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     left: -104%;
     z-index: 3;
     width: 16rem;
@@ -890,7 +891,7 @@ aui-message:first-child,
   .contact-section {
     left: 0;
     align-items: unset;
-    height: 100%;
+    /* height: 100%; */
   }
   .project-section {
     left: 0;
@@ -918,6 +919,8 @@ aui-message:first-child,
   }
   .service-container {
     width: 100%;
+    margin-top: 5rem;
+    padding: 2rem;
   }
   .my-services {
     grid-template-columns: 1fr;
