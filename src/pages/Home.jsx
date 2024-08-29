@@ -17,7 +17,7 @@ function Home() {
 
 <ThemeIcons />
 
-{/* {theme1 === false && <SkyBg />} */}
+{theme1 === false && <SkyBg />}
      
       <div className="home-container">
         <div className="avatar">

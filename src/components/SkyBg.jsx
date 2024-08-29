@@ -82,7 +82,7 @@ class SkyBg extends React.Component {
             ))}
           </svg>
           <div id="shootingstars">
-            {[...Array(60)].map((x, y) => (
+            {[...Array(80)].map((x, y) => (
               <div
                 key={y}
                 className="wish"
