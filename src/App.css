@@ -40,6 +40,9 @@ span,
 h3 {
   color: var(--font-color);
 }
+.border{
+  border-radius: 7px;
+}
 body {
   font-family: sans-serif;
   /* background-color: #000; */

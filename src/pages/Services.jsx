@@ -13,7 +13,7 @@ function Services() {
         <div className="service-container">
             <h2>What I Do</h2>
             <div className="my-services">
-                <div className='each-service'>
+                <div className='each-service border'>
                     <div className='number'>
                         01
                     </div>
@@ -26,7 +26,7 @@ function Services() {
                     </p>
                 </div>
 
-                <div className='each-service'>
+                <div className='each-service border'>
                     <div className='number'>
                         02
                     </div>
@@ -41,7 +41,7 @@ function Services() {
 
 
 
-                <div className='each-service'>
+                <div className='each-service border'>
                     <div className='number'>
                         03
                     </div>
@@ -57,19 +57,19 @@ function Services() {
 <div className="facts">
     <h3>Fun Facts</h3>
     <div className="fun-facts">
-        <div className='each-fact'>
+        <div className='each-fact border'>
             <span>20+</span>
             <p>projects finished</p>
         </div>
-        <div className='each-fact'> 
+        <div className='each-fact border'> 
             <span>10k+</span>
             <p>Lines of code</p>
         </div>
-        <div className='each-fact'> 
+        <div className='each-fact border'> 
             <span>30+</span>
             <p>Github repositories</p>
         </div>
-        <div className='each-fact'> 
+        <div className='each-fact border'> 
             <span>100+</span>
             <p>Cups of coffee consumed</p>
         </div>
