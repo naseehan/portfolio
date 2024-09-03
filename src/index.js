@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
 
-ReactGA.initialize("G-SRX5M4NWJB"); // Replace with your Measurement ID
+ReactGA.initialize("G-SRX5M4NWJB"); 
 ReactGA.send("pageview");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
