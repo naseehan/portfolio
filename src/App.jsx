@@ -9,6 +9,8 @@ import NewProjects from "./pages/NewProjects";
 import NewSide from "./components/NewSide";
 import { changeTheme } from "./features/themeSlice";
 import { useSelector } from "react-redux";
+// vercel analytics
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const { theme1 } = useSelector((state) => state.theme);
@@ -23,6 +25,7 @@ function App() {
         <Route path="/service" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Analytics />
     </>
   );
 }
