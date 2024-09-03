@@ -5,11 +5,7 @@
 .light{
     --text-color: #000;
 }
-html, body{
-    font-family: 'Roboto Mono', monospace;
-    background: '#212121';
-    height: 100%;
-  }
+
   .container{
     height: 100%;
     width: 100%;
@@ -18,6 +14,7 @@ html, body{
     display: flex;
   }
   .text{
+    font-family: 'Roboto Mono', monospace;
     position: fixed;
     top: 2%;
     left: 0;

@@ -1,6 +1,15 @@
 import React from 'react'
-
+import song from './rick.mp3'
 const Socials = ({color, secColor}) => {
+
+const handleClick = (e) => {
+  // e.preventDefault()
+  let sound = new Audio(song)
+  sound.play().catch(error => {
+    console.log("Error playing audio", error);
+  })
+}
+
 
   return (
     <div className="socials">
@@ -51,6 +60,18 @@ const Socials = ({color, secColor}) => {
         colors={`primary:${color},secondary:${color},tertiary:${color}`}
         style={{ width: "30px", height: "30px" }}
       ></lord-icon>
+    </a>
+    <a onClick={(e) =>handleClick()}>
+      {/* <i className="fa-brands fa-linkedin-in"></i> */}
+      <lord-icon
+    src="https://cdn.lordicon.com/poseeyvv.json"
+    trigger="loop"
+    delay="1500"
+    stroke="bold"
+    state="hover-rotate"
+    colors={`primary:${secColor},secondary:${color},tertiary:${color}`}
+    style={{ width: "30px", height: "30px" }}
+></lord-icon>
     </a>
   </div>
   )
