@@ -4,6 +4,7 @@ import Socials from "../components/Socials";
 import ThemeIcons from "../components/ThemeIcons";
 import { useSelector } from "react-redux";
 import SkyBg from "../components/SkyBg";
+import ScrambleText from "../components/ScrambleText";
 
 
 
@@ -14,7 +15,7 @@ function Home() {
 
   return (
     <section className={`home-section ${theme1 ? "light" : "dark"}`}>
-
+<ScrambleText />
 <ThemeIcons />
 
 {theme1 === false && <SkyBg />}

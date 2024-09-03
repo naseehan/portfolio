@@ -813,7 +813,7 @@ aui-message:first-child,
   }
   .home-container {
     display: grid;
-    margin-top: 3rem;
+    margin-top: 8rem;
     justify-items: center;
   }
   .mobile-nav {
