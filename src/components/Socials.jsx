@@ -66,10 +66,10 @@ const handleClick = (e) => {
       <lord-icon
     src="https://cdn.lordicon.com/poseeyvv.json"
     trigger="loop"
-    delay="1500"
+    delay="0"
     stroke="bold"
-    state="hover-rotate"
-    colors={`primary:${secColor},secondary:${color},tertiary:${color}`}
+    state="loop-roll"
+    colors={`primary:${secColor},secondary:${color},tertiary:${secColor}`}
     style={{ width: "30px", height: "30px" }}
 ></lord-icon>
     </a>

@@ -71,6 +71,7 @@ const ScrambleText = () => {
     'I like to play FOOTBALL',
     'Visca el Barça i visca Catalunya😉',
     "I'm always happy to chat, so email me for anything!",
+    "BTW, click on the Gift box for a lil fun :)"
   ];
 
   const elRef = useRef(null);

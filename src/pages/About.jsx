@@ -46,7 +46,7 @@ function About() {
           </div>
           <div className="dev-intro">
             <p>
-              Hi there! My name is Naseeh AN, and I'm a React developer building
+              Hi there! My name is Naseeh AN, and I'm a <strong>React Developer</strong>  building
               web applications and user interfaces. I'm passionate about
               building responsive and interactive web experiences using the
               latest technologies and best practices. I'm constantly learning
