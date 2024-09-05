@@ -11,6 +11,8 @@ import { changeTheme } from "./features/themeSlice";
 import { useSelector } from "react-redux";
 // vercel analytics
 import { Analytics } from "@vercel/analytics/react"
+// vercel speed check
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const { theme1 } = useSelector((state) => state.theme);
@@ -26,6 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }
