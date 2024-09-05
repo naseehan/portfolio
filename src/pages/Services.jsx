@@ -1,6 +1,7 @@
 import React from 'react'
 import ThemeIcons from '../components/ThemeIcons'
 import { useSelector } from 'react-redux';
+import Counter from '../components/Counter';
 
 function Services() {
 
@@ -58,19 +59,28 @@ function Services() {
     <h3>Fun Facts</h3>
     <div className="fun-facts">
         <div className='each-fact border'>
-            <span>20+</span>
+            {/* <span>20+</span> */}
+                <Counter start={0} end={20} suffix="+" duration={2000}/>
+
             <p>projects finished</p>
         </div>
         <div className='each-fact border'> 
-            <span>10k+</span>
+            {/* <span>10k+</span> */}
+            <Counter start={0} end={10} suffix="k+" duration={2000}/>
+
             <p>Lines of code</p>
         </div>
         <div className='each-fact border'> 
-            <span>30+</span>
+            {/* <span>30+</span> */}
+                <Counter start={0} end={30} suffix="+" duration={2000}/>
+
             <p>Github repositories</p>
         </div>
         <div className='each-fact border'> 
-            <span>100+</span>
+            {/* <span>100+</span> */}
+                <Counter start={0} end={100} suffix="+" duration={2000}/>
+
+
             <p>Cups of coffee consumed</p>
         </div>
     </div>
