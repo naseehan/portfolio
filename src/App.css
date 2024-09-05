@@ -30,6 +30,7 @@ strong{
   --button-color: #000;
   --about-border: #dfdfdf;
   --year: #000;
+  transition:  .5s ;
 }
 .light {
   --font-color: #000;
@@ -46,6 +47,7 @@ strong{
   --button-color: #fff;
   --about-border: #000;
   --year: #F7EFE5;
+  transition:  .5s ;
 }
 p,
 h1,
