@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function NewProjects() {
   const [itemId, setItemId] = useState("");
   const { theme1 } = useSelector((state) => state.theme);
-
+console.log(ProjectDetails)
   const handleEventClick = (id) => {
     setItemId(id);
   };
