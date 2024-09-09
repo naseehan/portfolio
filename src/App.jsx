@@ -9,6 +9,7 @@ import NewProjects from "./pages/NewProjects";
 import NewSide from "./components/NewSide";
 import { changeTheme } from "./features/themeSlice";
 import { useSelector } from "react-redux";
+import Error from "./components/Error";
 // vercel analytics
 import { Analytics } from "@vercel/analytics/react"
 // vercel speed check
@@ -19,14 +20,17 @@ function App() {
 
   return (
     <>
-      <SideNav />
+     <SideNav />
       <Routes>
+      
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<NewProjects />} />
         <Route path="/service" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Error />} />
       </Routes>
+      
       <Analytics />
       <SpeedInsights />
     </>
