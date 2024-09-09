@@ -181,6 +181,7 @@ textarea::placeholder {
   line-height: 1.5;
   font-size: 1.2rem;
   font-family: "Ubuntu", sans-serif;
+  text-align: justify;
 }
 .socials {
   display: flex;
@@ -313,33 +314,21 @@ textarea::placeholder {
 }
 .bar {
   position: absolute;
-  width: 96%;
   height: 3px;
+  width: 96%;
   background-color: #7b7b7b;
 }
 .js .bar {
   width: 90%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .mongo .bar {
   width: 80%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .html .bar {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .express .bar {
   width: 75%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .education {

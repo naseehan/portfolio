@@ -23,7 +23,6 @@ function About() {
     // Reveal elements
     sr.reveal(".headline", { origin: "bottom" });
     sr.reveal(".autoShow", { origin: "bottom", interval: 200 });
-
     // Clean up on unmount
     return () => {
       sr.destroy();
@@ -126,7 +125,7 @@ function About() {
                 <label htmlFor="">React</label>
                 <span>96%</span>
                 <div className="progress">
-                  <div className="bar"></div>
+                  <div className="react-bar bar"></div>
                 </div>
               </div>
 
@@ -152,7 +151,7 @@ function About() {
                 <label htmlFor="">HTML</label>
                 <span>100%</span>
                 <div className="progress">
-                  <div className="bar"></div>
+                  <div className="html-bar bar"></div>
                 </div>
               </div>
 
