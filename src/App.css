@@ -74,7 +74,7 @@ textarea::placeholder {
   position: fixed;
   top: -16px;
   left: 0;
-  height: 47.4rem;
+  /* height: 47.4rem; */
   width: 16rem;
 }
 .side-nav-container ul {
@@ -204,6 +204,7 @@ textarea::placeholder {
   position: absolute;
   top: 0;
   left: 16rem;
+  transition: .5s linear;
 }
 .about-container {
   display: flex;
