@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function NewProjects() {
   const [itemId, setItemId] = useState("");
   const { theme1 } = useSelector((state) => state.theme);
-console.log(ProjectDetails)
+
   const handleEventClick = (id) => {
     setItemId(id);
   };
@@ -26,7 +26,7 @@ console.log(ProjectDetails)
               key={item.id}
               onClick={() => handleEventClick(item.id)}
             >
-              <img src={item.img} alt={item.openName} loading="lazy"/>
+              <img src={item.img} alt="naseeh" loading="lazy"/>
               {itemId === item.id && (
                 <div
                   className={`lightbox-overlay ${item.openName}`}
