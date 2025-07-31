@@ -4,10 +4,7 @@ export default async function handler(req, res) {
   }
 
   // Get IP and User Agent from headers
-  const ip =
-    req.headers['x-forwarded-for']?.split(',')[0] ||
-    req.headers['client-ip'] ||
-    'Unknown IP';
+  const {ip} = req.body
 
   const userAgent = req.headers['user-agent'] || 'Unknown Agent';
 
@@ -31,19 +28,11 @@ export default async function handler(req, res) {
     if (locData && !locData.error) {
       locationText = `${locData.city}, ${locData.region}, ${locData.country_name}`;
     }
-  } catch {}
+  } catch (e){
 
-  // Clean agent summary
-  let cleanAgent = 'Unknown Device';
-  if (/android/i.test(userAgent)) {
-    cleanAgent = 'Android - ' + (userAgent.match(/Chrome\/[\d.]+/) || [''])[0];
-  } else if (/iphone|ipad/i.test(userAgent)) {
-    cleanAgent = 'iOS - ' + (userAgent.match(/Safari\/[\d.]+/) || [''])[0];
-  } else if (/windows/i.test(userAgent)) {
-    cleanAgent = 'Windows - ' + (userAgent.match(/Chrome\/[\d.]+/) || [''])[0];
-  } else if (/mac os/i.test(userAgent)) {
-    cleanAgent = 'macOS - ' + (userAgent.match(/Chrome\/[\d.]+/) || [''])[0];
   }
+
+  
 
   const message = `👀 New Visit!
 📅 Time: ${time}
