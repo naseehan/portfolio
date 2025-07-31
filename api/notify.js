@@ -3,10 +3,26 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { ip, userAgent } = req.body;
-  const time = new Date().toLocaleString();
+  // Get IP and User Agent from headers
+  const ip =
+    req.headers['x-forwarded-for']?.split(',')[0] ||
+    req.headers['client-ip'] ||
+    'Unknown IP';
 
-  // Get location from IP using ipapi.co (no key required)
+  const userAgent = req.headers['user-agent'] || 'Unknown Agent';
+
+  // Format time in IST
+  const time = new Intl.DateTimeFormat('en-IN', {
+    timeZone: 'Asia/Kolkata',
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }).format(new Date());
+
+  // Location from IP
   let locationText = 'Unknown Location';
   try {
     const locRes = await fetch(`https://ipapi.co/${ip}/json/`);
@@ -15,11 +31,25 @@ export default async function handler(req, res) {
     if (locData && !locData.error) {
       locationText = `${locData.city}, ${locData.region}, ${locData.country_name}`;
     }
-  } catch (e) {
-    // Fallback stays as "Unknown Location"
+  } catch {}
+
+  // Clean agent summary
+  let cleanAgent = 'Unknown Device';
+  if (/android/i.test(userAgent)) {
+    cleanAgent = 'Android - ' + (userAgent.match(/Chrome\/[\d.]+/) || [''])[0];
+  } else if (/iphone|ipad/i.test(userAgent)) {
+    cleanAgent = 'iOS - ' + (userAgent.match(/Safari\/[\d.]+/) || [''])[0];
+  } else if (/windows/i.test(userAgent)) {
+    cleanAgent = 'Windows - ' + (userAgent.match(/Chrome\/[\d.]+/) || [''])[0];
+  } else if (/mac os/i.test(userAgent)) {
+    cleanAgent = 'macOS - ' + (userAgent.match(/Chrome\/[\d.]+/) || [''])[0];
   }
 
-  const message = `👀 New Visit!\n📅 Time: ${time}\n🌐 IP: ${ip}\n📍 Location: ${locationText}\n📱 Agent: ${userAgent}`;
+  const message = `👀 New Visit!
+📅 Time: ${time}
+🌐 IP: ${ip}
+📍 Location: ${locationText}
+📱 Agent: ${cleanAgent}`;
 
   try {
     const telegramRes = await fetch(`https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`, {
