@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import "./App.css";
 import SideNav from "./components/SideNav";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -18,6 +18,27 @@ const Contact = React.lazy(() => import("./pages/Contact"));
 
 function App() {
   const { theme1 } = useSelector((state) => state.theme);
+ 
+
+   useEffect(() => {
+    const notifyVisit = async () => {
+      const ip = await fetch('https://api.ipify.org?format=json')
+        .then(res => res.json())
+        .then(data => data.ip);
+
+      await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ip,
+          userAgent: navigator.userAgent,
+        }),
+      });
+    };
+
+    notifyVisit();
+  }, []);
+
 
 
   return (
