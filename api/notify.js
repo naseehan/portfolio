@@ -38,7 +38,7 @@ export default async function handler(req, res) {
 📅 Time: ${time}
 🌐 IP: ${ip}
 📍 Location: ${locationText}
-📱 Agent: ${cleanAgent}`;
+📱 Agent: ${userAgent}`;
 
   try {
     const telegramRes = await fetch(`https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`, {
