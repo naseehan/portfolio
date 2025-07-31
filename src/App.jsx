@@ -20,24 +20,15 @@ function App() {
   const { theme1 } = useSelector((state) => state.theme);
  
 
-   useEffect(() => {
-    const notifyVisit = async () => {
-      const ip = await fetch('https://api.ipify.org?format=json')
-        .then(res => res.json())
-        .then(data => data.ip);
+useEffect(() => {
+  const notifyVisit = async () => {
+    await fetch('/api/notify', {
+      method: 'POST',
+    });
+  };
 
-      await fetch('/api/notify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ip,
-          userAgent: navigator.userAgent,
-        }),
-      });
-    };
-
-    notifyVisit();
-  }, []);
+  notifyVisit();
+}, []);
 
 
 
