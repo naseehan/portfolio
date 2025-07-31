@@ -3,10 +3,20 @@ import car from "../assets/car.png";
 import movie from "../assets/movie.png";
 import project from "../assets/project.png";
 import room from "../assets/room.png";
+import sports from "../assets/sports.png";
 
 const ProjectDetails = [
   {
     id: 1,
+    openName: "sports",
+    name: "Signature Sports",
+    description:
+      "An e-commerce web application designed for a modern sports retail store. The platform allows users to browse, search, and purchase a wide range of sports equipment and apparel. Built with a clean and responsive design, it ensures a seamless shopping experience across all devices.",
+    img: sports,
+    link: "https://signature-sports.onrender.com/",
+  },
+  {
+    id: 2,
     openName: "room",
     name: "Paradise Hotel",
     description:
@@ -15,7 +25,7 @@ const ProjectDetails = [
     link: "https://reservation-system-dun.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     openName: "event",
     name: "Noble Events",
     description:
@@ -24,7 +34,7 @@ const ProjectDetails = [
     link: "https://noble-events.onrender.com/",
   },
   {
-    id: 3,
+    id: 4,
     openName: "project",
     name: "Project management tool",
     description:
@@ -33,7 +43,7 @@ const ProjectDetails = [
     link: "https://project-management-client-blush.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     openName: "car",
     name: "Car Rental",
     description:
@@ -42,14 +52,14 @@ const ProjectDetails = [
     link: "https://car-rental-new.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     openName: "movie",
     name: "Movie",
     description:
       "Introducing my new movie app, designed to help you discover your next favorite movie. Our app provides you with access to a vast selection of movies, all available to browse and search by name or category.",
     img: movie,
     link: "https://naseehan.github.io/movieland/",
-  },
+  }
 ];
 
 export default ProjectDetails;
