@@ -1,16 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ScrollReveal from "scrollreveal";
 import WaveText from "../components/WaveText";
 import { useSelector } from "react-redux";
 import ThemeIcons from "../components/ThemeIcons";
 
-
-
-
 function About() {
-
   const { theme1 } = useSelector((state) => state.theme);
+  let age;
+  let date = {
+    year: new Date().getFullYear(),
+    month: new Date().getMonth(),
+  };
 
+  {
+    date.month < 6 ? (age = date.year - 2001 - 1) : (age = date.year - 2001);
+  }
 
   useEffect(() => {
     // Initialize ScrollReveal
@@ -31,7 +35,7 @@ function About() {
 
   return (
     <section className={`about-section ${theme1 ? "light" : "dark"}`}>
-     <ThemeIcons />
+      <ThemeIcons />
 
       <div className={`about-container ${theme1 ? "light" : "dark"}`}>
         <div className="about-me-container">
@@ -45,13 +49,13 @@ function About() {
           </div>
           <div className="dev-intro">
             <p>
-              Hi there! My name is Naseeh AN, and I'm a <strong>React Developer</strong>  building
-              web applications and user interfaces. I'm passionate about
-              building responsive and interactive web experiences using the
-              latest technologies and best practices. I'm constantly learning
-              and staying up-to-date with the latest trends in front-end
-              development, and I strive to create user interfaces that are both
-              visually appealing and functional.
+              Hi there! My name is Naseeh AN, and I'm a{" "}
+              <strong>React Developer</strong> building web applications and
+              user interfaces. I'm passionate about building responsive and
+              interactive web experiences using the latest technologies and best
+              practices. I'm constantly learning and staying up-to-date with the
+              latest trends in front-end development, and I strive to create
+              user interfaces that are both visually appealing and functional.
             </p>
             <p>
               One of my specialties is taking an idea from scratch and creating
@@ -72,7 +76,7 @@ function About() {
                 </li>
                 <li>
                   <span>Age:</span>
-                  <span>23</span>
+                  <span>{age}</span>
                 </li>
                 <li>
                   <span>Address:</span>
