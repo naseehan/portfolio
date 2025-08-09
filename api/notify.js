@@ -6,7 +6,9 @@ export default async function handler(req, res) {
   // Get IP and User Agent from headers
   const {ip} = req.body
 
+
   const userAgent = req.headers['user-agent'] || 'Unknown Agent';
+
 
   // Format time in IST
   const time = new Intl.DateTimeFormat('en-IN', {
@@ -20,11 +22,12 @@ export default async function handler(req, res) {
   }).format(new Date());
 
   // Location from IP
-  let locationText = 'Unknown Location';
+  let locationText;
+ 
+  
   try {
     const locRes = await fetch(`https://ipapi.co/${ip}/json/`);
     const locData = await locRes.json();
-
     if (locData && !locData.error) {
       locationText = `${locData.city}, ${locData.region}, ${locData.country_name}`;
     }
@@ -32,7 +35,6 @@ export default async function handler(req, res) {
 
   }
 
-  
 
   const message = `👀 New Visit!
 📅 Time: ${time}
