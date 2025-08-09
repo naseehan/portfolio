@@ -36,7 +36,6 @@ let result =   await fetch('/api/notify', {
         }),
       });
 let data =await result.json()
-console.log(data);
 
 
   };
