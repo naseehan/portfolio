@@ -35,7 +35,6 @@ let result =   await fetch('/api/notify', {
           ip
         }),
       });
-let data =await result.json()
 
 
   };

@@ -147,7 +147,7 @@ textarea::placeholder {
   border-radius: 100%;
 }
 .home-img {
-  background-image: url(./assets/nas.JPG);
+  background-image: url(./assets/nas.webp);
   position: absolute;
   top: 0;
   bottom: 0;
