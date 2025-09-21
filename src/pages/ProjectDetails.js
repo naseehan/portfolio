@@ -2,8 +2,8 @@ import event from "../assets/event.png";
 import car from "../assets/car.png";
 import movie from "../assets/movie.png";
 import project from "../assets/project.png";
-import room from "../assets/room.png";
-import sports from "../assets/sports.png";
+import room from "../assets/room.webp";
+import sports from "../assets/sports.webp";
 
 const ProjectDetails = [
     {
