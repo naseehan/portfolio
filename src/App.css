@@ -1,12 +1,11 @@
 @font-face {
-  font-family: 'nasalizationregular';
-  src: url('nasalization-rg-webfont.woff2') format('woff2'),
-       url('nasalization-rg-webfont.woff') format('woff');
+  font-family: "nasalizationregular";
+  src: url("nasalization-rg-webfont.woff2") format("woff2"),
+    url("nasalization-rg-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
-strong{
+strong {
   color: #eb5939;
   font-size: x-large;
   letter-spacing: 1px;
@@ -23,31 +22,31 @@ strong{
   --skill-bg-color: #000;
   --skill-font: #efefef;
   --service-bg: #323232;
-  --number-bg: #473C33;
+  --number-bg: #473c33;
   --facts-bg: #000;
   --border: #fdfdfd;
   --contact-form-border: #6a6464;
   --button-color: #000;
   --about-border: #dfdfdf;
   --year: #000;
-  transition:  .5s ;
+  transition: 0.5s;
 }
 .light {
   --font-color: #000;
   --bg-color: #f7f7f7;
-  --sidenav-bg: #F0EBE3;
+  --sidenav-bg: #f0ebe3;
   --p-font-color: #000;
-  --skill-bg-color: #EEEDEB;
+  --skill-bg-color: #eeedeb;
   --skill-font: #000;
-  --service-bg: #EEEDEB;
-  --number-bg:   #f8f8f8;
+  --service-bg: #eeedeb;
+  --number-bg: #f8f8f8;
   --facts-bg: #ebebeb;
   --border: #000;
   --contact-form-border: #6a6464;
   --button-color: #fff;
   --about-border: #000;
-  --year: #F7EFE5;
-  transition:  .5s ;
+  --year: #f7efe5;
+  transition: 0.5s;
 }
 p,
 h1,
@@ -55,7 +54,7 @@ span,
 h3 {
   color: var(--font-color);
 }
-.border{
+.border {
   border-radius: 7px;
 }
 body {
@@ -139,6 +138,7 @@ textarea::placeholder {
   gap: 4rem;
   width: 100%;
   justify-content: center;
+  z-index: 10;
 }
 .avatar {
   min-width: 244px;
@@ -171,7 +171,7 @@ textarea::placeholder {
   font-size: 4rem;
   margin: 0;
   font-weight: 800;
-  font-family: 'nasalizationregular', Arial, sans-serif;
+  font-family: "nasalizationregular", Arial, sans-serif;
 }
 .home-description span {
   font-size: 1.5rem;
@@ -204,7 +204,7 @@ textarea::placeholder {
   position: absolute;
   top: 0;
   left: 16rem;
-  transition: .5s linear;
+  transition: 0.5s linear;
 }
 .about-container {
   display: flex;
@@ -338,7 +338,7 @@ textarea::placeholder {
   flex-direction: column;
   gap: 2rem;
 }
-.education h3{
+.education h3 {
   color: var(--font-color);
 }
 .year-study {
@@ -422,7 +422,7 @@ textarea::placeholder {
 .project-container {
   padding: 4rem;
 }
-.project-container h2{
+.project-container h2 {
   color: var(--font-color);
 }
 .my-projects {
@@ -489,7 +489,7 @@ textarea::placeholder {
   top: 0;
   left: 16rem;
 }
-.service-section h2{
+.service-section h2 {
   color: var(--font-color);
 }
 .service-container {
@@ -506,7 +506,7 @@ textarea::placeholder {
   background-color: var(--service-bg);
   padding: 2rem;
 }
-.each-service h3{
+.each-service h3 {
   color: var(--font-color);
 }
 .each-service p {
@@ -828,13 +828,13 @@ aui-message:first-child,
   }
   .mobile-nav {
     display: flex;
+    z-index: 20;
     flex-direction: column;
     gap: 3rem;
     align-items: center;
     justify-content: center;
     position: fixed;
     /* left: -104%; */
-    z-index: 3;
     width: 16rem;
     height: 100vh;
     background-color: var(--sidenav-bg);
@@ -914,6 +914,9 @@ aui-message:first-child,
   .service-container {
     width: 100%;
     margin-top: 5rem;
+    padding: 2rem;
+  }
+  .project-container {
     padding: 2rem;
   }
   .my-services {

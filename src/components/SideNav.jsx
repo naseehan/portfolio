@@ -43,7 +43,7 @@ function SideNav() {
           animate={nav ? "open" : "closed"}
           variants={variants}
           initial="closed"
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          transition={{ type: "tween", duration: 1, ease: "easeInOut" }}
         >
           <ul>
             <li>

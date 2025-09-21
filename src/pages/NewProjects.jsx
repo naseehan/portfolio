@@ -26,7 +26,7 @@ function NewProjects() {
               key={item.id}
               onClick={() => handleEventClick(item.id)}
             >
-              <img src={item.img} alt="naseeh" loading="lazy"/>
+              <img src={item.img} alt={item.name} loading="lazy"/>
               {itemId === item.id && (
                 <div
                   className={`lightbox-overlay ${item.openName}`}

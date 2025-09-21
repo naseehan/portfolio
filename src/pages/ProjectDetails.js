@@ -6,8 +6,17 @@ import room from "../assets/room.png";
 import sports from "../assets/sports.png";
 
 const ProjectDetails = [
-  {
+    {
     id: 1,
+    openName: "aliya",
+    name: "Aliya Nizar Studio",
+    description:
+      "Aliya Nizar Studio showcases the work of Dubai-based artist and interior designer Aliya Nizar. Visitors can explore her curated portfolio, purchase prints and original artworks, or consult her for bespoke design proposals.",
+    img: "/images/aliya.webp",
+    link: "https://www.aliyanizarstudio.com/",
+  },
+  {
+    id: 2,
     openName: "sports",
     name: "Signature Sports",
     description:
@@ -16,7 +25,7 @@ const ProjectDetails = [
     link: "https://signature-sports.onrender.com/",
   },
   {
-    id: 2,
+    id: 3,
     openName: "room",
     name: "Paradise Hotel",
     description:
@@ -25,7 +34,7 @@ const ProjectDetails = [
     link: "https://reservation-system-dun.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     openName: "event",
     name: "Noble Events",
     description:
@@ -34,7 +43,7 @@ const ProjectDetails = [
     link: "https://noble-events.onrender.com/",
   },
   {
-    id: 4,
+    id: 5,
     openName: "project",
     name: "Project management tool",
     description:
@@ -43,7 +52,7 @@ const ProjectDetails = [
     link: "https://project-management-client-blush.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     openName: "car",
     name: "Car Rental",
     description:
@@ -52,7 +61,7 @@ const ProjectDetails = [
     link: "https://car-rental-new.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     openName: "movie",
     name: "Movie",
     description:
