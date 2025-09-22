@@ -422,6 +422,11 @@ textarea::placeholder {
 .project-container {
   padding: 4rem;
 }
+.overlay-close{
+  position: absolute;
+  inset: 0;
+
+}
 .project-container h2 {
   color: var(--font-color);
 }
@@ -440,6 +445,7 @@ textarea::placeholder {
   border-radius: 5px;
   width: 96%;
   display: flex;
+  z-index: 10;
 }
 .lightbox-content {
   display: flex !important;
@@ -447,11 +453,12 @@ textarea::placeholder {
   justify-content: center;
   align-items: center;
 }
-.lightbox-content h1 {
+.lightbox-content h3 {
   line-height: 1.5;
   text-align: center;
 }
-.lightbox-content button {
+.lightbox-content a {
+  text-decoration: none;
   border: none;
   padding: 15px 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

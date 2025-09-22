@@ -8,7 +8,7 @@ function NewProjects() {
   const { theme1 } = useSelector((state) => state.theme);
 
   const handleEventClick = (id) => {
-    setItemId(id);
+    setItemId(itemId == id ? "" : id)
   };
   const handleEventClose = () => {
     setItemId("");
@@ -18,6 +18,7 @@ function NewProjects() {
     <section className={`project-section ${theme1 ? "light" : "dark"}`}>
       <ThemeIcons />
       <div className="project-container">
+        <div className="overlay-close" onClick={handleEventClose}></div>
         <h2>My projects</h2>
         <div className="my-projects">
           {ProjectDetails.map((item) => (
@@ -33,9 +34,9 @@ function NewProjects() {
                   onClick={handleEventClose}
                 >
                   <div className="lightbox-content">
-                    <h1>{item.description}</h1>
+                    <h3>{item.description}</h3>
                     <a href={item.link}>
-                      <button>Click here</button>
+                      Click here
                     </a>
                   </div>
                 </div>
