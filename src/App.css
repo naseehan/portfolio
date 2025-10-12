@@ -568,6 +568,9 @@ textarea::placeholder {
   width: -webkit-fill-available;
   height: 100%;
 }
+.contact-section .container{
+  position: absolute;
+}
 .contact-container {
   width: 100%;
   padding: 3rem;
