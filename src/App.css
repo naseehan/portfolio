@@ -785,7 +785,7 @@ aui-message:first-child,
 }
 
 .aui-message.success:after,
-.aui-message-success:after {
+.aui-message-success:after { 
   content: "\f05d";
   color: #fff;
 }

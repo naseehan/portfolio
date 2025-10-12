@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import ThemeIcons from "../components/ThemeIcons";
 import { useSelector } from "react-redux";
+import { set } from "animejs";
 
 function Contact() {
   const { theme1 } = useSelector((state) => state.theme);
   const [loading, setLoading] = useState(false);
   const [alertMessage, setAlertMessage] = useState(null);
+  const [isSuccess, setIsSuccess] = useState(null);
 
   const [data, setData] = useState({
     name: "",
@@ -23,23 +25,29 @@ function Contact() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://portfolio-phdb.onrender.com/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://portfolio-phdb.onrender.com/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (response.status === 429) throw new Error("Too many requests");
       if (!response.ok) throw new Error("Server error");
 
       setAlertMessage("Message sent successfully!");
+      setIsSuccess(true);
       setData({ name: "", email: "", message: "" });
       e.target.reset();
     } catch (err) {
       if (err.message === "Too many requests") {
         setAlertMessage("You’re sending messages too fast. Try again later.");
+        setIsSuccess(false);
       } else {
         setAlertMessage("Something went wrong. Please try again.");
+        setIsSuccess(false);
       }
       console.error(err);
     } finally {
@@ -57,7 +65,15 @@ function Contact() {
           <div className="row">
             <div id="aui-flag-container">
               <div className="aui-flag" aria-hidden="false">
-                <div className="aui-message aui-message-success success closeable shadowed">
+                <div
+                  className={`aui-message aui-message-success ${
+                    isSuccess === true
+                      ? "success"
+                      : isSuccess === false
+                      ? "error"
+                      : "warning"
+                  }  closeable shadowed`}
+                >
                   {alertMessage}
                 </div>
               </div>
