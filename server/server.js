@@ -30,7 +30,7 @@ const limiter = rateLimit({
 });
 
 app.post("/contact", limiter , async (req, res) => {
-  const { name, email, phone, what, message } = req.body;
+  const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: "Missing required fields" });
@@ -44,8 +44,6 @@ app.post("/contact", limiter , async (req, res) => {
       text: `
         Name: ${name}
         Email: ${email}
-        Phone: ${phone || "Not provided"}
-        Regarding: ${what}
         Message: ${message}
       `,
     });

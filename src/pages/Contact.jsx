@@ -23,7 +23,7 @@ function Contact() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://aliyanizar.onrender.com/sendmail", {
+      const response = await fetch("https://portfolio-phdb.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
