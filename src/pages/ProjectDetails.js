@@ -1,9 +1,10 @@
-import event from "../assets/event.png";
-import car from "../assets/car.png";
-import movie from "../assets/movie.png";
-import project from "../assets/project.png";
-import room from "../assets/room.webp";
-import sports from "../assets/sports.webp";
+import event from "../assets/event1.webp";
+import car from "../assets/car1.webp";
+import movie from "../assets/movie1.webp";
+import project from "../assets/project1.webp";
+import room from "../assets/room1.webp";
+import sports from "../assets/sports1.webp";
+import aliya from "../assets/aliya1.webp"
 
 const ProjectDetails = [
     {
@@ -12,7 +13,7 @@ const ProjectDetails = [
     name: "Aliya Nizar Studio",
     description:
       "Aliya Nizar Studio showcases the work of Dubai-based artist and interior designer Aliya Nizar. Visitors can explore her curated portfolio, purchase prints and original artworks, or consult her for bespoke design proposals.",
-    img: "/images/aliya.webp",
+    img: aliya,
     link: "https://www.aliyanizarstudio.com/",
   },
   {
