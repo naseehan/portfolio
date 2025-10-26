@@ -1,9 +1,10 @@
 @font-face {
   font-family: "nasalizationregular";
-  src: url("nasalization-rg-webfont.woff2") format("woff2"),
-    url("nasalization-rg-webfont.woff") format("woff");
+  src: url("./assets/fonts/nasalization-rg-webfont.woff") format("woff2"),
+    url("./assets/fonts/nasalization-rg-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 strong {
   color: #eb5939;
@@ -147,7 +148,7 @@ textarea::placeholder {
   border-radius: 100%;
 }
 .home-img {
-  background-image: url(./assets/nas.webp);
+  background-image: url(./assets/nas1.webp);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -187,11 +188,15 @@ textarea::placeholder {
   display: flex;
   gap: 1.3rem;
 }
-.socials a {
+.socials a, .socials button {
   color: #fff;
   transition: 0.3s ease-in-out;
 }
-.socials a:hover {
+.socials button{
+  background: none;
+  border: none;
+}
+.socials a:hover, .socials button:hover {
   transform: translateY(-5px);
 }
 /* ------------------about section-------------- */
@@ -365,49 +370,6 @@ textarea::placeholder {
   font-size: 0.8rem;
 }
 
-/* auto show animation */
-/* .autoShow {
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-} */
-/* @keyframes autoShowAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(200px) scale(0.3);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-} */
-/* Apply the autoBlur animation only on larger screens */
-/* @media (min-width: 768px) {
-  .autoBlur {
-    animation: autoBlurAnimation 3s ease-in-out infinite;
-    animation-timeline: view();
-  }
-}
-
-@keyframes autoBlurAnimation {
-  0% {
-    filter: blur(40px);
-  }
-  35%,
-  60% {
-    filter: blur(0px);
-  }
-  100% {
-    filter: blur(40px);
-  }
-} */
-
-/* For mobile and tablet devices, do not apply any blur or animation */
-/* @media (max-width: 767px) {
-  .autoBlur {
-    filter: none;
-    animation: none;
-  }
-} */
 
 /* -----------------project section-------------------- */
 .project-section {
