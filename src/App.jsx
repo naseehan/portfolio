@@ -3,7 +3,6 @@ import "./App.css";
 import SideNav from "./components/SideNav";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import { useSelector } from "react-redux";
 // vercel analytics
 import { Analytics } from "@vercel/analytics/react"
 // vercel speed check
@@ -20,27 +19,20 @@ function App() {
 
 useEffect(() => {
   const notifyVisit = async () => {
-
-    const ip = await fetch('https://api.ipify.org?format=json')
-        .then(res => res.json())
-        .then(data => data.ip);
-   
-
-let result =   await fetch('/api/notify', {
+    try {
+      const res = await fetch('https://api.ipify.org?format=json');
+      const data = await res.json();
+      await fetch('/api/notify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ip
-        }),
+        body: JSON.stringify({ ip: data.ip }),
       });
-
-
+    } catch (err) {
+      console.error("Failed to notify visit:", err);
+    }
   };
-
-
   notifyVisit();
 }, []);
-
 
 
   return (
