@@ -7,26 +7,29 @@ const Counter = ({ start = 0, end, suffix = "", duration = 3000 }) => {
   const counterRef = useRef(null); // To observe the DOM element
 
   useEffect(() => {
+    const counterElement = counterRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setVisible(true);
-            observer.unobserve(entry.target); // Unobserve to avoid repeating the animation
+            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.5 } // 50% of the element is visible
+      { threshold: 0.5 }
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    if (counterElement) {
+      observer.observe(counterElement);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (counterElement) {
+        observer.unobserve(counterElement);
       }
+      observer.disconnect();
     };
   }, []);
 

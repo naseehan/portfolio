@@ -8,7 +8,7 @@ function NewProjects() {
   const { theme1 } = useSelector((state) => state.theme);
 
   const handleEventClick = (id) => {
-    setItemId(itemId == id ? "" : id)
+    setItemId(itemId === id ? "" : id)
   };
   const handleEventClose = () => {
     setItemId("");

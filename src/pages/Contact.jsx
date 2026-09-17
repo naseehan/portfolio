@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ThemeIcons from "../components/ThemeIcons";
 import { useSelector } from "react-redux";
-import { set } from "animejs";
 
 function Contact() {
   const { theme1 } = useSelector((state) => state.theme);
@@ -66,13 +65,12 @@ function Contact() {
             <div id="aui-flag-container">
               <div className="aui-flag" aria-hidden="false">
                 <div
-                  className={`aui-message aui-message-success ${
-                    isSuccess === true
+                  className={`aui-message aui-message-success ${isSuccess === true
                       ? "success"
                       : isSuccess === false
-                      ? "error"
-                      : "warning"
-                  }  closeable shadowed`}
+                        ? "error"
+                        : "warning"
+                    }  closeable shadowed`}
                 >
                   {alertMessage}
                 </div>

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
-import WaveText from "../components/WaveText";
 import { useSelector } from "react-redux";
 import ThemeIcons from "../components/ThemeIcons";
 import SkillBar from "../components/SkillBar";

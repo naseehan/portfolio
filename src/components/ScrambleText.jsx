@@ -1,6 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './scrambleText.css'
+import './scrambleText.css';
 import { useSelector } from 'react-redux';
+
+const phrases = [
+  'Hello there!',
+  'passionate about creating beautiful products that empower people',
+  "You'll find me playing video games in my free time.",
+  'I like to play FOOTBALL',
+  'Visca el Barça i visca Catalunya😉',
+  "I'm always happy to chat, so email me for anything!",
+  "BTW, click on the Gift box for a lil fun :)"
+];
 
 class TextScramble {
   constructor(el) {
@@ -13,25 +23,32 @@ class TextScramble {
     const oldText = this.el.innerText;
     const length = Math.max(oldText.length, newText.length);
     const promise = new Promise((resolve) => (this.resolve = resolve));
+
     this.queue = [];
+
     for (let i = 0; i < length; i++) {
       const from = oldText[i] || '';
       const to = newText[i] || '';
       const start = Math.floor(Math.random() * 40);
       const end = start + Math.floor(Math.random() * 40);
+
       this.queue.push({ from, to, start, end });
     }
+
     cancelAnimationFrame(this.frameRequest);
     this.frame = 0;
     this.update();
+
     return promise;
   }
 
   update() {
     let output = '';
     let complete = 0;
+
     for (let i = 0, n = this.queue.length; i < n; i++) {
       let { from, to, start, end, char } = this.queue[i];
+
       if (this.frame >= end) {
         complete++;
         output += to;
@@ -40,12 +57,15 @@ class TextScramble {
           char = this.randomChar();
           this.queue[i].char = char;
         }
+
         output += `<span class="dud">${char}</span>`;
       } else {
         output += from;
       }
     }
+
     this.el.innerHTML = output;
+
     if (complete === this.queue.length) {
       this.resolve();
     } else {
@@ -60,48 +80,38 @@ class TextScramble {
 }
 
 const ScrambleText = () => {
-    
-    const { theme1 } = useSelector((state) => state.theme);
-
-
-  const phrases = [
-    'Hello there!',
-    'passionate about creating beautiful products that empower people',
-    "You'll find me playing video games in my free time.",
-    'I like to play FOOTBALL',
-    'Visca el Barça i visca Catalunya😉',
-    "I'm always happy to chat, so email me for anything!",
-    "BTW, click on the Gift box for a lil fun :)"
-  ];
+  const { theme1 } = useSelector((state) => state.theme);
 
   const elRef = useRef(null);
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    if (elRef.current) {
-      const fx = new TextScramble(elRef.current);
-      const next = () => {
-        fx.setText(phrases[counter]).then(() => {
-          setTimeout(() => {
-            setCounter((prevCounter) => (prevCounter + 1) % phrases.length);
-          }, 3000);
-        });
-      };
+    if (!elRef.current) return;
 
-      next(); // Start the initial text scramble
+    const fx = new TextScramble(elRef.current);
 
-      // Clean up on unmount
-      return () => {
-        cancelAnimationFrame(fx.frameRequest);
-      };
-    }
+    const next = () => {
+      fx.setText(phrases[counter]).then(() => {
+        setTimeout(() => {
+          setCounter((prevCounter) => (prevCounter + 1) % phrases.length);
+        }, 3000);
+      });
+    };
+
+    next();
+
+    return () => {
+      cancelAnimationFrame(fx.frameRequest);
+    };
   }, [counter]);
 
   return (
-  <div className={`text ${theme1 ? 'light' : "dark"}`} ref={elRef}></div>
-  
-  )
- 
+    <div
+      className={`text ${theme1 ? 'light' : 'dark'}`}
+      ref={elRef}
+    ></div>
+  );
 };
 
 export default ScrambleText;
+
