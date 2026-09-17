@@ -7,7 +7,7 @@ import sports from "../assets/sports1.webp";
 import aliya from "../assets/aliya1.webp"
 
 const ProjectDetails = [
-    {
+  {
     id: 1,
     openName: "aliya",
     name: "Aliya Nizar Studio",
@@ -23,7 +23,7 @@ const ProjectDetails = [
     description:
       "An e-commerce web application designed for a modern sports retail store. The platform allows users to browse, search, and purchase a wide range of sports equipment and apparel. Built with a clean and responsive design, it ensures a seamless shopping experience across all devices.",
     img: sports,
-    link: "https://signature-sports.onrender.com/",
+    link: "https://signature-sports.vercel.app/",
   },
   {
     id: 3,

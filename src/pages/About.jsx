@@ -3,18 +3,22 @@ import ScrollReveal from "scrollreveal";
 import WaveText from "../components/WaveText";
 import { useSelector } from "react-redux";
 import ThemeIcons from "../components/ThemeIcons";
+import SkillBar from "../components/SkillBar";
 
 function About() {
   const { theme1 } = useSelector((state) => state.theme);
-  let age;
-  let date = {
-    year: new Date().getFullYear(),
-    month: new Date().getMonth(),
+  const calculateAge = (birthDate) => {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const m = today.getMonth() - birth.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+      age--;
+    }
+    return age;
   };
 
-  {
-    date.month < 6 ? (age = date.year - 2001 - 1) : (age = date.year - 2001);
-  }
+  const age = calculateAge("2001-05-05");
 
   useEffect(() => {
     // Initialize ScrollReveal
@@ -125,55 +129,15 @@ function About() {
           <h2 className="autoShow headline">Programming Skills</h2>
           <div className="skills autoShow">
             <div className="left-skills">
-              <div>
-                <label htmlFor="">React</label>
-                <span>96%</span>
-                <div className="progress">
-                  <div className="react-bar bar"></div>
-                </div>
-              </div>
-
-              <div className="js">
-                <label htmlFor="">Javascript</label>
-                <span>90%</span>
-                <div className="progress">
-                  <div className="bar"></div>
-                </div>
-              </div>
-
-              <div className="mongo">
-                <label htmlFor="">Mongo DB</label>
-                <span>80%</span>
-                <div className="progress">
-                  <div className="bar"></div>
-                </div>
-              </div>
+              <SkillBar skill="React" percentage={96} />
+              <SkillBar skill="Javascript" percentage={90} />
+              <SkillBar skill="Mongo DB" percentage={80} />
             </div>
 
             <div className="left-skills">
-              <div className="html">
-                <label htmlFor="">HTML</label>
-                <span>100%</span>
-                <div className="progress">
-                  <div className="html-bar bar"></div>
-                </div>
-              </div>
-
-              <div className="html">
-                <label htmlFor="">CSS</label>
-                <span>100%</span>
-                <div className="progress">
-                  <div className="bar"></div>
-                </div>
-              </div>
-
-              <div className="express">
-                <label htmlFor="">Express</label>
-                <span>75%</span>
-                <div className="progress">
-                  <div className="bar"></div>
-                </div>
-              </div>
+              <SkillBar skill="HTML" percentage={100} />
+              <SkillBar skill="CSS" percentage={100} />
+              <SkillBar skill="Express" percentage={75} />
             </div>
           </div>
         </div>
