@@ -3,7 +3,7 @@ import car from "../assets/car1.webp";
 import movie from "../assets/movie1.webp";
 import project from "../assets/project1.webp";
 import room from "../assets/room1.webp";
-import sports from "../assets/sports1.webp";
+import sports from "../assets/sports.webp";
 import aliya from "../assets/aliya1.webp"
 
 const ProjectDetails = [
