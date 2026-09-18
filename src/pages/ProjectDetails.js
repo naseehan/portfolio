@@ -5,10 +5,19 @@ import project from "../assets/project1.webp";
 import room from "../assets/room1.webp";
 import sports from "../assets/sports.webp";
 import aliya from "../assets/aliya1.webp"
-
+import mDaily from "../assets/mDaily.webp"
 const ProjectDetails = [
   {
     id: 1,
+    openName: "mDaily",
+    name: "M Daily",
+    description:
+      "M Daily is a modern grocery delivery app that allows users to browse products, manage their cart, place orders, and track deliveries. It includes secure authentication, address management, online payments, push notifications, rewards, and an admin panel for managing products, inventory, orders, and delivery settings.",
+    img: mDaily,
+    link: "https://play.google.com/store/apps/details?id=com.adilinte.kada&hl=en&pli=1",
+  },
+  {
+    id: 2,
     openName: "aliya",
     name: "Aliya Nizar Studio",
     description:
@@ -17,7 +26,7 @@ const ProjectDetails = [
     link: "https://www.aliyanizarstudio.com/",
   },
   {
-    id: 2,
+    id: 3,
     openName: "sports",
     name: "Signature Sports",
     description:
@@ -26,7 +35,7 @@ const ProjectDetails = [
     link: "https://signature-sports.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     openName: "room",
     name: "Paradise Hotel",
     description:
@@ -35,7 +44,7 @@ const ProjectDetails = [
     link: "https://reservation-system-dun.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     openName: "event",
     name: "Noble Events",
     description:
@@ -44,7 +53,7 @@ const ProjectDetails = [
     link: "https://noble-events.onrender.com/",
   },
   {
-    id: 5,
+    id: 6,
     openName: "project",
     name: "Project management tool",
     description:
@@ -53,7 +62,7 @@ const ProjectDetails = [
     link: "https://project-management-client-blush.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     openName: "car",
     name: "Car Rental",
     description:
@@ -62,7 +71,7 @@ const ProjectDetails = [
     link: "https://car-rental-new.vercel.app/",
   },
   {
-    id: 7,
+    id: 8,
     openName: "movie",
     name: "Movie",
     description:
