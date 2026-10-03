@@ -6,6 +6,8 @@ import room from "../assets/room1.webp";
 import sports from "../assets/sports.webp";
 import aliya from "../assets/aliya1.webp"
 import mDaily from "../assets/mDaily.webp"
+import phone from "../assets/phone.webp"
+
 const ProjectDetails = [
   {
     id: 1,
@@ -36,6 +38,15 @@ const ProjectDetails = [
   },
   {
     id: 4,
+    openName: "phone",
+    name: "hand2hand Mobiles",
+    description:
+      "A modern, mobile-first website for a smartphone, tablet, and laptop repair service centre. Features an interactive repair booking and instant quote system, real-time store status, service catalog with pricing, FAQ sections, and WhatsApp inquiry integration. Built with React, TypeScript, and Tailwind CSS, with responsive UI, route-level code splitting, accessibility-focused components, and LocalBusiness Schema.org structured data for local SEO.",
+    img: phone,
+    link: "https://hand2hand-two.vercel.app/",
+  },
+  {
+    id: 5,
     openName: "room",
     name: "Paradise Hotel",
     description:
@@ -44,7 +55,7 @@ const ProjectDetails = [
     link: "https://reservation-system-dun.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     openName: "event",
     name: "Noble Events",
     description:
@@ -53,7 +64,7 @@ const ProjectDetails = [
     link: "https://noble-events.onrender.com/",
   },
   {
-    id: 6,
+    id: 7,
     openName: "project",
     name: "Project management tool",
     description:
@@ -62,7 +73,7 @@ const ProjectDetails = [
     link: "https://project-management-client-blush.vercel.app/",
   },
   {
-    id: 7,
+    id: 8,
     openName: "car",
     name: "Car Rental",
     description:
@@ -71,7 +82,7 @@ const ProjectDetails = [
     link: "https://car-rental-new.vercel.app/",
   },
   {
-    id: 8,
+    id: 9,
     openName: "movie",
     name: "Movie",
     description:

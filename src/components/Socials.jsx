@@ -1,14 +1,7 @@
 import React from "react";
-import song from "./rick.mp3";
 
 const Socials = ({ color, secColor }) => {
-  const handleClick = (e) => {
-    // e.preventDefault()
-    let sound = new Audio(song);
-    sound.play().catch((error) => {
-      console.log("Error playing audio", error);
-    });
-  };
+
 
   return (
     <div className="socials">
@@ -80,17 +73,6 @@ const Socials = ({ color, secColor }) => {
           style={{ width: "30px", height: "30px" }}
         ></lord-icon>
       </a>
-      <button onClick={(e) => handleClick()}>
-        <lord-icon
-          src="https://cdn.lordicon.com/poseeyvv.json"
-          trigger="loop"
-          delay="0"
-          stroke="bold"
-          state="loop-roll"
-          colors={`primary:${secColor},secondary:${color},tertiary:${secColor}`}
-          style={{ width: "30px", height: "30px" }}
-        ></lord-icon>
-      </button>
     </div>
   );
 };
