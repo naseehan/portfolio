@@ -34,7 +34,7 @@ const ProjectDetails = [
     description:
       "An e-commerce web application designed for a modern sports retail store. The platform allows users to browse, search, and purchase a wide range of sports equipment and apparel. Built with a clean and responsive design, it ensures a seamless shopping experience across all devices.",
     img: sports,
-    link: "https://signature-sports.vercel.app/",
+    link: "https://www.signaturesports.shop/",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const ProjectDetails = [
     description:
       "A modern, mobile-first website for a smartphone, tablet, and laptop repair service centre. Features an interactive repair booking and instant quote system, real-time store status, service catalog with pricing, FAQ sections, and WhatsApp inquiry integration. Built with React, TypeScript, and Tailwind CSS, with responsive UI, route-level code splitting, accessibility-focused components, and LocalBusiness Schema.org structured data for local SEO.",
     img: phone,
-    link: "https://hand2hand-two.vercel.app/",
+    link: "https://www.hand2handmobiles.shop/",
   },
   {
     id: 5,
