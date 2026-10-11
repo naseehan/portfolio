@@ -7,6 +7,7 @@ import sports from "../assets/sports.webp";
 import aliya from "../assets/aliya1.webp"
 import mDaily from "../assets/mDaily.webp"
 import phone from "../assets/phone.webp"
+import eduzell from "../assets/eduzell.webp"
 
 const ProjectDetails = [
   {
@@ -47,6 +48,15 @@ const ProjectDetails = [
   },
   {
     id: 5,
+    openName: "eduzell",
+    name: "Eduzell",
+    description:
+      "A modern, responsive website for a technology training and software development company. Features dedicated pages for training programs, course curricula, learning approaches, internship opportunities, career support, recruitment services, and company information. Redesigned from a legacy static website using Next.js, TypeScript, and Tailwind CSS, with reusable components, optimized page rendering, SEO-friendly architecture, and a consistent user experience across desktop and mobile devices.",
+    img: eduzell,
+    link: "https://www.eduzell.in/",
+  },
+  {
+    id: 6,
     openName: "room",
     name: "Paradise Hotel",
     description:
@@ -55,7 +65,7 @@ const ProjectDetails = [
     link: "https://reservation-system-dun.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     openName: "event",
     name: "Noble Events",
     description:
@@ -64,7 +74,7 @@ const ProjectDetails = [
     link: "https://noble-events.onrender.com/",
   },
   {
-    id: 7,
+    id: 8,
     openName: "project",
     name: "Project management tool",
     description:
@@ -73,7 +83,7 @@ const ProjectDetails = [
     link: "https://project-management-client-blush.vercel.app/",
   },
   {
-    id: 8,
+    id: 9,
     openName: "car",
     name: "Car Rental",
     description:
@@ -82,7 +92,7 @@ const ProjectDetails = [
     link: "https://car-rental-new.vercel.app/",
   },
   {
-    id: 9,
+    id: 10,
     openName: "movie",
     name: "Movie",
     description:
