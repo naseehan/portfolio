@@ -22,7 +22,8 @@ Other scripts:
 - `src/app/` — routes (`/`, `/about`, `/skills`, `/projects`, `/experience`, `/contact`). Each route renders the full one-page portfolio and scrolls to its section. `/service` and `/services` redirect to `/experience` for old links.
 - `src/components/` — page sections, navbar, footer, theme toggle, intro curtain, custom cursor, pixel cat.
 - `src/data/portfolioData.js` — all personal info, skills, projects and experience content. Edit this file to update the site.
-- `public/` — static files (images, sitemap, robots, manifest). `public/images/og-image.jpg` is the social share preview.
+- `public/` — static files (images, manifest). `public/images/og-image.jpg` is the social share preview.
+- `src/data/site.js` — site URL, title and description used for SEO metadata, structured data, `sitemap.xml` (`src/app/sitemap.js`) and `robots.txt` (`src/app/robots.js`).
 
 ## Contact form server
 
