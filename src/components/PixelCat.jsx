@@ -34,15 +34,15 @@ const ANIM_CONFIG = {
 };
 
 const CAT_QUOTES = [
-  "Meow! Ready to explore?",
-  "Purr... love this retro theme!",
-  "Found any bugs? I'll pounce!",
-  "*adjusts tiny adventurer backpack*",
-  "Let's check out the projects!",
-  "Level 99 Quest Companion!",
-  "Adventure awaits!",
-  "Purr-fection in every pixel.",
-  "Follow me down the page!",
+  "Meow! I'm Naseeh's sidekick.",
+  "Scroll on, I'll keep up!",
+  "Psst... the projects are pawsome.",
+  "I catch bugs. Naseeh fixes them.",
+  "Built with React and catnip.",
+  "Backpack full of side projects!",
+  "Nap time? Not while you're here.",
+  "Purr... smooth scrolling, huh?",
+  "Like it? Drop Naseeh a message!",
 ];
 
 const FRAME_W = 80; // Display width in CSS pixels (1/2 scale of 160px)
@@ -80,6 +80,8 @@ const PixelCat = () => {
   const wrapperRef = useRef(null);
   const flipperRef = useRef(null);
   const spriteRef = useRef(null);
+  const bubbleRef = useRef(null);
+  const bubbleTailRef = useRef(null);
   const rafIdRef = useRef(null);
 
   // Update background-position on sprite DOM directly for max 60fps performance
@@ -272,6 +274,20 @@ const PixelCat = () => {
         flipperRef.current.style.transform = `scaleX(${facingRef.current})`;
       }
 
+      // Keep the speech bubble inside the viewport (it is centred on the cat, which rests at
+      // the screen edge), sliding it sideways while the tail keeps pointing at the cat
+      if (bubbleRef.current && bubbleTailRef.current) {
+        const margin = 8;
+        const halfWidth = bubbleRef.current.offsetWidth / 2;
+        const catCenter = posXRef.current + FRAME_W / 2;
+        const minCenter = margin + halfWidth;
+        const maxCenter = Math.max(minCenter, window.innerWidth - margin - halfWidth);
+        const shift = Math.min(maxCenter, Math.max(minCenter, catCenter)) - catCenter;
+        const tailInset = Math.max(-halfWidth + 14, Math.min(halfWidth - 14, -shift));
+        bubbleRef.current.style.translate = `calc(-50% + ${shift}px) 0`;
+        bubbleTailRef.current.style.left = `calc(50% + ${tailInset}px)`;
+      }
+
       rafIdRef.current = requestAnimationFrame(animateLoop);
     };
 
@@ -302,11 +318,12 @@ const PixelCat = () => {
         {/* Speech Bubble (Always normal reading orientation, never flipped) */}
         {speech && (
           <div
+            ref={bubbleRef}
             className="pixel-cat-speech-bubble"
             role="status"
           >
             <span className="bubble-pixel-text">{speech}</span>
-            <span className="bubble-pixel-tail" aria-hidden="true" />
+            <span ref={bubbleTailRef} className="bubble-pixel-tail" aria-hidden="true" />
           </div>
         )}
 
