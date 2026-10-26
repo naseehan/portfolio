@@ -2,26 +2,19 @@
 
 import React, { useState, useRef, useEffect } from "react";
 
-/**
- * PixelHeroSprite
- * An original 8-bit developer/adventurer sprite with a gentle stepped idle animation.
- * Features an interactive retro speech balloon:
- * - Displays each title for exactly 3 seconds.
- * - On fast clicks, immediately cycles to the next title with no lag.
- * - Restarts the 3-second display window on every click.
- */
+
 const PixelHeroSprite = () => {
   const [bubbleMessage, setBubbleMessage] = useState(null);
   const timeoutRef = useRef(null);
   const currentIndexRef = useRef(-1);
 
   const messages = [
-    "Ready Player 1!",
-    "Press Start to explore!",
-    "Crafting clean code.",
-    "Available for hire!",
-    "Level 99 Dev Quests!",
-    "100% Bug-free builds!"
+    "Player 1 ready!",
+    "Quest: web & mobile apps",
+    "Loadout: React + Node",
+    "Based in UAE, remote-ready",
+    "Open to new quests!",
+    "Team up? Hit Contact!"
   ];
 
   const handleSpriteClick = () => {
