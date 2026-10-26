@@ -9,6 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import Script from "next/script";
 import localFont from "next/font/local";
 import { Outfit, Press_Start_2P, Space_Mono } from "next/font/google";
+import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION } from "../data/site";
 import "../App.css";
 
 // Headings & brand: Nasalization (self-hosted, from src/assets/fonts)
@@ -44,14 +45,24 @@ const pressStart2P = Press_Start_2P({
 
 const GA_MEASUREMENT_ID = "G-9WE11TY9N7";
 
-const SITE_DESCRIPTION =
-  "Naseeh AN is a full-stack developer building modern web applications and mobile experiences with React, Next.js, Node.js, and React Native.";
-
 export const metadata = {
-  metadataBase: new URL("https://www.naseeh.in"),
-  title: "Naseeh AN — Full-Stack Developer",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
   description: SITE_DESCRIPTION,
-  authors: [{ name: "Naseeh AN" }],
+  applicationName: "Naseeh AN",
+  authors: [{ name: "Naseeh AN", url: SITE_URL }],
+  creator: "Naseeh AN",
+  keywords: [
+    "Naseeh AN",
+    "full-stack developer",
+    "full-stack developer UAE",
+    "web developer UAE",
+    "React developer",
+    "Next.js developer",
+    "Node.js developer",
+    "React Native developer",
+    "freelance web developer",
+  ],
   icons: {
     icon: "/images/logo.png",
   },
@@ -59,24 +70,32 @@ export const metadata = {
   alternates: {
     canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
   openGraph: {
-    type: "website",
-    url: "https://www.naseeh.in",
+    type: "profile",
+    url: SITE_URL,
     siteName: "Naseeh AN",
-    title: "Naseeh AN — Full-Stack Developer",
+    locale: "en_US",
+    title: SITE_TITLE,
     description: SITE_DESCRIPTION,
+    firstName: "Naseeh",
+    lastName: "AN",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Naseeh AN — Full-Stack Developer",
+        alt: SITE_TITLE,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naseeh AN — Full-Stack Developer",
+    title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: ["/images/og-image.jpg"],
   },
