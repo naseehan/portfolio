@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true,
+    // Image optimization is on so next/image can serve each screen a right-sized AVIF/WebP
+    formats: ["image/avif", "image/webp"],
   },
 };
 

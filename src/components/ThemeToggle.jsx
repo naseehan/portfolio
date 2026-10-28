@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../features/themeSlice";
+import Icon from "./Icon";
 
 const ThemeToggle = ({ showLabel = true, className = "" }) => {
   const dispatch = useDispatch();
@@ -30,9 +31,9 @@ const ThemeToggle = ({ showLabel = true, className = "" }) => {
     >
       <span className="theme-toggle-indicator" aria-hidden="true">
         {isLight ? (
-          <i className="fa-solid fa-moon theme-toggle-icon" />
+          <Icon name="fa-solid fa-moon" className="theme-toggle-icon" />
         ) : (
-          <i className="fa-solid fa-sun theme-toggle-icon" />
+          <Icon name="fa-solid fa-sun" className="theme-toggle-icon" />
         )}
       </span>
       {showLabel && (

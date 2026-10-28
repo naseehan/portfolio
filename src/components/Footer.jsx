@@ -2,6 +2,7 @@
 
 import React from "react";
 import { personalInfo, socialLinks } from "../data/portfolioData";
+import Icon from "./Icon";
 
 const Footer = () => {
   const scrollToTop = (e) => {
@@ -56,7 +57,7 @@ const Footer = () => {
                 className="footer-social-icon"
                 aria-label={s.name}
               >
-                <i className={s.icon} aria-hidden="true" />
+                <Icon name={s.icon} />
               </a>
             ))}
           </div>
