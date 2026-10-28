@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { personalInfo, socialLinks } from "../data/portfolioData";
+import Icon from "./Icon";
 
 const CONTACT_ENDPOINT = "https://portfolio-phdb.onrender.com/contact";
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -284,7 +285,7 @@ const ContactSection = () => {
                       className="social-btn"
                       aria-label={s.name}
                     >
-                      <i className={s.icon} aria-hidden="true" />
+                      <Icon name={s.icon} />
                       <span>{s.name}</span>
                     </a>
                   ))}

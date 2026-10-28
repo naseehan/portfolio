@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import ThemeToggle from "./ThemeToggle";
+import Icon from "./Icon";
 
 const navLinks = [
   { id: "home", label: "Home", code: "00" },
@@ -143,7 +144,7 @@ const Navbar = () => {
             aria-controls="mobile-drawer"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
-            <i className={`fa-solid ${mobileMenuOpen ? "fa-xmark" : "fa-bars"}`} />
+            <Icon name={mobileMenuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"} />
           </button>
         </div>
       </div>
@@ -174,7 +175,7 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(false)}
             aria-label="Close menu"
           >
-            <i className="fa-solid fa-xmark" />
+            <Icon name="fa-solid fa-xmark" />
           </button>
         </div>
 
@@ -191,7 +192,7 @@ const Navbar = () => {
                   >
                     <span className="mobile-nav-code">{link.code}</span>
                     <span className="mobile-nav-label">{link.label}</span>
-                    <i className="fa-solid fa-arrow-right mobile-nav-arrow" aria-hidden="true" />
+                    <Icon name="fa-solid fa-arrow-right" className="mobile-nav-arrow" />
                   </a>
                 </li>
               );

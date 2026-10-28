@@ -175,6 +175,17 @@ img {
   display: block;
 }
 
+/* Inline SVG icons (src/components/Icon.jsx), sized and aligned like the Font Awesome
+   icon font they replace: 1em tall, width from the icon's own proportions */
+.icon-svg {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+  overflow: visible;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
+}
+
 /* Focus styles for keyboard accessibility */
 :focus-visible {
   outline: 2px solid var(--focus-ring);

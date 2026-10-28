@@ -3,6 +3,7 @@
 import React from "react";
 import ApparitionIcon from "./ApparitionIcon";
 import { personalInfo, socialLinks } from "../data/portfolioData";
+import Icon from "./Icon";
 
 const HeroSection = () => {
   const scrollTo = (id) => (e) => {
@@ -85,7 +86,7 @@ const HeroSection = () => {
                     title={item.name}
                     aria-label={item.name}
                   >
-                    <i className={item.icon} aria-hidden="true" />
+                    <Icon name={item.icon} />
                   </a>
                 ))}
               </div>

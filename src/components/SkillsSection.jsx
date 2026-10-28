@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { skillsData, skillCategories } from "../data/portfolioData";
+import Icon from "./Icon";
 
 const SkillsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -59,7 +60,7 @@ const SkillsSection = () => {
             <div key={skill.name} className="skill-card">
               <div className="skill-card-inner">
                 <div className="skill-icon-wrap" aria-hidden="true">
-                  <i className={skill.icon} />
+                  <Icon name={skill.icon} />
                 </div>
                 <div className="skill-info">
                   <h3 className="skill-name">{skill.name}</h3>
