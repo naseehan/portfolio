@@ -112,14 +112,6 @@ export default function RootLayout({ children }) {
       className={`${nasalization.variable} ${outfit.variable} ${spaceMono.variable} ${pressStart2P.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-      </head>
       <body suppressHydrationWarning>
         {/* Anti-theme flash script: sets data-theme synchronously before first paint */}
         <script

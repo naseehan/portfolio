@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
+import Image from "next/image";
 import { projectsData, projectCategories } from "../data/portfolioData";
 
 const ProjectsSection = () => {
@@ -69,13 +70,12 @@ const ProjectsSection = () => {
               <article key={project.id} className="project-card">
                 {/* Media Wrap with subtle hover zoom */}
                 <div className="project-media-wrap">
-                  <img
-                    src={project.img?.src || project.img}
+                  {/* Screenshots are up to ~1900px wide; next/image serves a card-sized copy */}
+                  <Image
+                    src={project.img}
                     alt={`${project.name} preview`}
                     className="project-image"
-                    loading="lazy"
-                    width="600"
-                    height="375"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 400px"
                   />
                   <div className="project-media-overlay" />
 
