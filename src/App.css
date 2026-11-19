@@ -130,6 +130,7 @@ body {
   color: var(--text-primary);
   line-height: 1.68;
   min-height: 100vh;
+  min-height: 100dvh; /* visible height on phones (100vh ignores the browser toolbars) */
   transition: background-color var(--transition-normal), color var(--transition-normal);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -184,6 +185,15 @@ img {
   overflow: visible;
   vertical-align: -0.125em;
   flex-shrink: 0;
+}
+
+/* Touch: no grey tap flash (the pressed states at the end of this file give feedback
+   instead), and no double-tap zoom when controls are tapped quickly */
+a,
+button,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 /* Focus styles for keyboard accessibility */
@@ -270,10 +280,12 @@ img {
   transition: all var(--transition-fast);
 }
 
-.filter-chip:hover {
-  border-color: var(--border-medium);
-  color: var(--text-primary);
-  background: var(--bg-surface-elevated);
+@media (hover: hover) {
+  .filter-chip:hover {
+    border-color: var(--border-medium);
+    color: var(--text-primary);
+    background: var(--bg-surface-elevated);
+  }
 }
 
 .filter-chip.is-active {
@@ -315,8 +327,10 @@ img {
   text-decoration: none;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .btn:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .btn-primary {
@@ -326,8 +340,10 @@ img {
   box-shadow: 0 2px 4px rgba(194, 59, 43, 0.2);
 }
 
-.btn-primary:hover {
-  background-color: color-mix(in srgb, var(--retro-red) 88%, #000);
+@media (hover: hover) {
+  .btn-primary:hover {
+    background-color: color-mix(in srgb, var(--retro-red) 88%, #000);
+  }
 }
 
 .btn-secondary {
@@ -336,17 +352,21 @@ img {
   border: 1px solid var(--border-medium);
 }
 
-.btn-secondary:hover {
-  background-color: var(--bg-surface-elevated);
-  border-color: var(--text-primary);
+@media (hover: hover) {
+  .btn-secondary:hover {
+    background-color: var(--bg-surface-elevated);
+    border-color: var(--text-primary);
+  }
 }
 
 .btn-arrow {
   transition: transform var(--transition-fast);
 }
 
-.btn:hover .btn-arrow {
-  transform: translate(2px, -2px);
+@media (hover: hover) {
+  .btn:hover .btn-arrow {
+    transform: translate(2px, -2px);
+  }
 }
 
 /* ==========================================================================
@@ -448,9 +468,11 @@ img {
   opacity: 0.85;
 }
 
-.nav-link:hover {
-  color: var(--text-primary);
-  background-color: var(--bg-surface-elevated);
+@media (hover: hover) {
+  .nav-link:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-surface-elevated);
+  }
 }
 
 .nav-link.is-active {
@@ -486,9 +508,11 @@ img {
   transition: all var(--transition-fast);
 }
 
-.theme-toggle-btn:hover {
-  background: var(--bg-surface-elevated);
-  border-color: var(--text-primary);
+@media (hover: hover) {
+  .theme-toggle-btn:hover {
+    background: var(--bg-surface-elevated);
+    border-color: var(--text-primary);
+  }
 }
 
 .theme-toggle-icon {
@@ -602,10 +626,16 @@ img {
   opacity: 0.5;
 }
 
-.mobile-nav-link:hover,
 .mobile-nav-link.is-active {
   background: var(--bg-surface-elevated);
   color: var(--text-primary);
+}
+
+@media (hover: hover) {
+  .mobile-nav-link:hover {
+    background: var(--bg-surface-elevated);
+    color: var(--text-primary);
+  }
 }
 
 .mobile-drawer-footer {
@@ -821,9 +851,11 @@ img {
   --apparition-smoke: rgb(30 41 59);
 }
 
-.cinematic-apparition-wrapper:hover {
-  transform: translateY(-2px) scale(1.12);
-  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.5));
+@media (hover: hover) {
+  .cinematic-apparition-wrapper:hover {
+    transform: translateY(-2px) scale(1.12);
+    filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.5));
+  }
 }
 
 .cinematic-apparition-wrapper:active {
@@ -1252,11 +1284,13 @@ img {
   transition: all var(--transition-fast);
 }
 
-.hero-social-link:hover {
-  color: var(--retro-red);
-  border-color: var(--border-medium);
-  background: var(--bg-surface-elevated);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .hero-social-link:hover {
+    color: var(--retro-red);
+    border-color: var(--border-medium);
+    background: var(--bg-surface-elevated);
+    transform: translateY(-2px);
+  }
 }
 
 .hero-tech-pills {
@@ -1416,9 +1450,11 @@ img {
   transition: transform var(--transition-fast), border-color var(--transition-fast);
 }
 
-.hero-sprite-button:hover {
-  transform: translateY(-2px);
-  border-color: var(--retro-red);
+@media (hover: hover) {
+  .hero-sprite-button:hover {
+    transform: translateY(-2px);
+    border-color: var(--retro-red);
+  }
 }
 
 /* 2-Step Authentic Retro Stepped Idle Bounce */
@@ -1586,9 +1622,11 @@ img {
   transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.principle-card:hover {
-  border-color: var(--border-medium);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .principle-card:hover {
+    border-color: var(--border-medium);
+    transform: translateY(-2px);
+  }
 }
 
 .principle-icon {
@@ -1681,8 +1719,10 @@ img {
   font-weight: 650;
 }
 
-.stat-link:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .stat-link:hover {
+    text-decoration: underline;
+  }
 }
 
 .highlight-avail {
@@ -1735,10 +1775,12 @@ img {
   transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.skill-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--border-medium);
-  box-shadow: var(--card-shadow);
+@media (hover: hover) {
+  .skill-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-medium);
+    box-shadow: var(--card-shadow);
+  }
 }
 
 .skill-card-inner {
@@ -1761,9 +1803,11 @@ img {
   transition: color var(--transition-fast), background-color var(--transition-fast);
 }
 
-.skill-card:hover .skill-icon-wrap {
-  color: var(--retro-red);
-  background-color: var(--bg-surface-tag);
+@media (hover: hover) {
+  .skill-card:hover .skill-icon-wrap {
+    color: var(--retro-red);
+    background-color: var(--bg-surface-tag);
+  }
 }
 
 .skill-name {
@@ -1854,10 +1898,12 @@ img {
 }
 
 /* Restrained Hover Lift & Subtle Border Transition */
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-medium);
-  box-shadow: var(--card-shadow-hover);
+@media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-medium);
+    box-shadow: var(--card-shadow-hover);
+  }
 }
 
 .project-media-wrap {
@@ -1877,8 +1923,10 @@ img {
 }
 
 /* Gentle Thumbnail Zoom on Card Hover */
-.project-card:hover .project-image {
-  transform: scale(1.035);
+@media (hover: hover) {
+  .project-card:hover .project-image {
+    transform: scale(1.035);
+  }
 }
 
 .project-media-overlay {
@@ -1966,8 +2014,10 @@ img {
   cursor: pointer;
 }
 
-.project-expand-btn:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .project-expand-btn:hover {
+    text-decoration: underline;
+  }
 }
 
 .project-tags {
@@ -2008,8 +2058,10 @@ img {
   transition: color var(--transition-fast);
 }
 
-.project-action-link:hover {
-  color: var(--retro-red);
+@media (hover: hover) {
+  .project-action-link:hover {
+    color: var(--retro-red);
+  }
 }
 
 /* Small Arrow Hover Movement */
@@ -2018,8 +2070,10 @@ img {
   transition: transform var(--transition-fast);
 }
 
-.project-card:hover .action-arrow {
-  transform: translate(3px, -3px);
+@media (hover: hover) {
+  .project-card:hover .action-arrow {
+    transform: translate(3px, -3px);
+  }
 }
 
 /* ==========================================================================
@@ -2046,9 +2100,11 @@ img {
   transition: all var(--transition-fast);
 }
 
-.timeline-tab-btn:hover {
-  border-color: var(--border-medium);
-  color: var(--text-primary);
+@media (hover: hover) {
+  .timeline-tab-btn:hover {
+    border-color: var(--border-medium);
+    color: var(--text-primary);
+  }
 }
 
 .timeline-tab-btn.is-active {
@@ -2127,9 +2183,11 @@ img {
   transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.timeline-card:hover {
-  border-color: var(--border-medium);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .timeline-card:hover {
+    border-color: var(--border-medium);
+    transform: translateY(-2px);
+  }
 }
 
 .timeline-card-header {
@@ -2245,9 +2303,11 @@ img {
   transition: transform var(--transition-fast), border-color var(--transition-fast);
 }
 
-.service-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--border-medium);
+@media (hover: hover) {
+  .service-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-medium);
+  }
 }
 
 .service-number {
@@ -2457,7 +2517,7 @@ img {
   border-radius: var(--radius-md);
   color: var(--text-primary);
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 1rem; /* 16px minimum, or iPhones zoom the page in when the field is tapped */
   letter-spacing: -0.01em;
   transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -2555,8 +2615,10 @@ img {
   transition: color var(--transition-fast);
 }
 
-.method-link:hover {
-  color: var(--retro-red);
+@media (hover: hover) {
+  .method-link:hover {
+    color: var(--retro-red);
+  }
 }
 
 .copy-btn {
@@ -2571,9 +2633,11 @@ img {
   transition: all var(--transition-fast);
 }
 
-.copy-btn:hover {
-  background: var(--bg-surface-tag);
-  color: var(--text-primary);
+@media (hover: hover) {
+  .copy-btn:hover {
+    background: var(--bg-surface-tag);
+    color: var(--text-primary);
+  }
 }
 
 .method-text {
@@ -2624,10 +2688,12 @@ img {
   transition: all var(--transition-fast);
 }
 
-.social-btn:hover {
-  border-color: var(--border-medium);
-  color: var(--retro-red);
-  transform: translateY(-1px);
+@media (hover: hover) {
+  .social-btn:hover {
+    border-color: var(--border-medium);
+    color: var(--retro-red);
+    transform: translateY(-1px);
+  }
 }
 
 /* ==========================================================================
@@ -2679,8 +2745,10 @@ img {
   color: var(--text-secondary);
 }
 
-.footer-links a:hover {
-  color: var(--retro-red);
+@media (hover: hover) {
+  .footer-links a:hover {
+    color: var(--retro-red);
+  }
 }
 
 .back-to-top-btn {
@@ -2698,10 +2766,12 @@ img {
   transition: all var(--transition-fast);
 }
 
-.back-to-top-btn:hover {
-  border-color: var(--border-medium);
-  color: var(--text-primary);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .back-to-top-btn:hover {
+    border-color: var(--border-medium);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+  }
 }
 
 .top-arrow {
@@ -2737,8 +2807,10 @@ img {
   transition: color var(--transition-fast);
 }
 
-.footer-social-icon:hover {
-  color: var(--retro-red);
+@media (hover: hover) {
+  .footer-social-icon:hover {
+    color: var(--retro-red);
+  }
 }
 
 /* ==========================================================================
@@ -2746,6 +2818,7 @@ img {
    ========================================================================== */
 .notfound-wrapper {
   min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh - var(--header-height));
   display: grid;
   place-items: center;
   padding: 40px 20px;
@@ -3300,8 +3373,10 @@ html[data-intro-seen] .intro-curtain-overlay {
   transform-origin: center bottom;
 }
 
-.pixel-cat-button:hover .pixel-cat-sprite {
-  filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.65)) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+@media (hover: hover) {
+  .pixel-cat-button:hover .pixel-cat-sprite {
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.65)) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+  }
 }
 
 .pixel-cat-button:active .pixel-cat-sprite {
@@ -3413,4 +3488,35 @@ html[data-intro-seen] .intro-curtain-overlay {
   .curtain-signal {
     animation: none !important;
   }
+}
+
+/* ==========================================================================
+   PRESSED STATES
+   Feedback while a control is held, on touch screens and with a mouse.
+   Kept last so it wins over the hover styles above.
+   ========================================================================== */
+.btn:active,
+.filter-chip:active,
+.theme-toggle-btn:active,
+.mobile-toggle-btn:active,
+.hero-social-link:active,
+.project-expand-btn:active,
+.timeline-tab-btn:active,
+.copy-btn:active,
+.social-btn:active,
+.back-to-top-btn:active,
+.footer-social-icon:active {
+  transform: scale(0.97);
+}
+
+.mobile-nav-link:active {
+  background: var(--bg-surface-elevated);
+}
+
+.nav-link:active,
+.stat-link:active,
+.project-action-link:active,
+.method-link:active,
+.footer-links a:active {
+  opacity: 0.7;
 }
